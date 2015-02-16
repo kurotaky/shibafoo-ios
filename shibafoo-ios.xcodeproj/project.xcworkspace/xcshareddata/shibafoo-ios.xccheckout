@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B41458D4-9169-4491-894B-1630CACFEEB2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>shibafoo-ios</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>597C9898F270AF2EDD62171A5BF0E3BD8C857900</key>
+		<string>github.com:kurotaky/shibafoo-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>shibafoo-ios.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>597C9898F270AF2EDD62171A5BF0E3BD8C857900</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:kurotaky/shibafoo-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>597C9898F270AF2EDD62171A5BF0E3BD8C857900</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>597C9898F270AF2EDD62171A5BF0E3BD8C857900</string>
+			<key>IDESourceControlWCCName</key>
+			<string>shibafoo-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

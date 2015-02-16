@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		215F0D7D1A90F0F000EDA3A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215F0D7C1A90F0F000EDA3A6 /* LoginViewController.swift */; };
 		2171D5CE1A35EB260030CFA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171D5CD1A35EB260030CFA4 /* AppDelegate.swift */; };
 		2171D5D01A35EB260030CFA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171D5CF1A35EB260030CFA4 /* ViewController.swift */; };
 		2171D5D31A35EB260030CFA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2171D5D11A35EB260030CFA4 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		215F0D7C1A90F0F000EDA3A6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2171D5C81A35EB260030CFA4 /* shibafoo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "shibafoo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2171D5CC1A35EB260030CFA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2171D5CD1A35EB260030CFA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +82,9 @@
 				2171D5CD1A35EB260030CFA4 /* AppDelegate.swift */,
 				2171D5CF1A35EB260030CFA4 /* ViewController.swift */,
 				2171D5D11A35EB260030CFA4 /* Main.storyboard */,
+				215F0D7C1A90F0F000EDA3A6 /* LoginViewController.swift */,
 				2171D5D41A35EB260030CFA4 /* Images.xcassets */,
+				2171D5E11A35EB260030CFA4 /* Supporting Files */,
 				2171D5D61A35EB260030CFA4 /* LaunchScreen.xib */,
 				2171D5CB1A35EB260030CFA4 /* Supporting Files */,
 			);
@@ -99,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				2171D5E31A35EB260030CFA4 /* shibafoo_iosTests.swift */,
-				2171D5E11A35EB260030CFA4 /* Supporting Files */,
 			);
 			path = "shibafoo-iosTests";
 			sourceTree = "<group>";
@@ -110,7 +113,8 @@
 				2171D5E21A35EB260030CFA4 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
+			path = "shibafoo-iosTests";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -212,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				215F0D7D1A90F0F000EDA3A6 /* LoginViewController.swift in Sources */,
 				2171D5D01A35EB260030CFA4 /* ViewController.swift in Sources */,
 				2171D5CE1A35EB260030CFA4 /* AppDelegate.swift in Sources */,
 			);
@@ -407,6 +412,7 @@
 				2171D5E91A35EB260030CFA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2171D5EA1A35EB260030CFA4 /* Build configuration list for PBXNativeTarget "shibafoo-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +421,7 @@
 				2171D5EC1A35EB260030CFA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

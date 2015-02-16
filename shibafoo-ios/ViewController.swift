@@ -9,10 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBAction func unwindToModalViewController(segure: UIStoryboardSegue) {
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // 最新のみんなのfooを読み込む
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,4 +26,3 @@ class ViewController: UIViewController {
 
 
 }
-
