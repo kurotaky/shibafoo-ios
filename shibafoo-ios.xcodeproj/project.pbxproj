@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		215F0D7D1A90F0F000EDA3A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215F0D7C1A90F0F000EDA3A6 /* LoginViewController.swift */; };
+		212112841B973BCD009C93C5 /* ParsedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212112831B973BCD009C93C5 /* ParsedPost.swift */; };
+		212112861B974476009C93C5 /* ParsedPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212112851B974476009C93C5 /* ParsedPostCell.swift */; };
 		2171D5CE1A35EB260030CFA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171D5CD1A35EB260030CFA4 /* AppDelegate.swift */; };
-		2171D5D01A35EB260030CFA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171D5CF1A35EB260030CFA4 /* ViewController.swift */; };
 		2171D5D31A35EB260030CFA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2171D5D11A35EB260030CFA4 /* Main.storyboard */; };
 		2171D5D51A35EB260030CFA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2171D5D41A35EB260030CFA4 /* Images.xcassets */; };
 		2171D5D81A35EB260030CFA4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2171D5D61A35EB260030CFA4 /* LaunchScreen.xib */; };
 		2171D5E41A35EB260030CFA4 /* shibafoo_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171D5E31A35EB260030CFA4 /* shibafoo_iosTests.swift */; };
+		217D60DB1B8FE70C00577081 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D60DA1B8FE70C00577081 /* LoginViewController.swift */; };
+		217D60DD1B95E61500577081 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D60DC1B95E61500577081 /* HomeViewController.swift */; };
+		217D60DF1B95E63E00577081 /* ReplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D60DE1B95E63E00577081 /* ReplyViewController.swift */; };
+		217D60E11B95E68200577081 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D60E01B95E68200577081 /* MainTabViewController.swift */; };
+		217D60E31B95EC1800577081 /* LovedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D60E21B95EC1800577081 /* LovedViewController.swift */; };
+		217D60E51B95EC9200577081 /* MyPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D60E41B95EC9200577081 /* MyPostViewController.swift */; };
+		21FCF5B91B8DDF6D00E2F249 /* shibafoo-launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FCF5B81B8DDF6D00E2F249 /* shibafoo-launch.png */; };
+		4F87B81B3C504C9A407543EC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 701779A930B90BD43F74030A /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +35,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		215F0D7C1A90F0F000EDA3A6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1CE47377E86EEC56891875CD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		212112831B973BCD009C93C5 /* ParsedPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedPost.swift; sourceTree = "<group>"; };
+		212112851B974476009C93C5 /* ParsedPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedPostCell.swift; sourceTree = "<group>"; };
 		2171D5C81A35EB260030CFA4 /* shibafoo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "shibafoo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2171D5CC1A35EB260030CFA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2171D5CD1A35EB260030CFA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2171D5CF1A35EB260030CFA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2171D5D21A35EB260030CFA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2171D5D41A35EB260030CFA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2171D5D71A35EB260030CFA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2171D5DD1A35EB260030CFA4 /* shibafoo-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "shibafoo-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2171D5E21A35EB260030CFA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2171D5E31A35EB260030CFA4 /* shibafoo_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shibafoo_iosTests.swift; sourceTree = "<group>"; };
+		217D60DA1B8FE70C00577081 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		217D60DC1B95E61500577081 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		217D60DE1B95E63E00577081 /* ReplyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplyViewController.swift; sourceTree = "<group>"; };
+		217D60E01B95E68200577081 /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		217D60E21B95EC1800577081 /* LovedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LovedViewController.swift; sourceTree = "<group>"; };
+		217D60E41B95EC9200577081 /* MyPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostViewController.swift; sourceTree = "<group>"; };
+		21FCF5B81B8DDF6D00E2F249 /* shibafoo-launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shibafoo-launch.png"; sourceTree = "<group>"; };
+		6C7387A3961F54987E7961CA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		701779A930B90BD43F74030A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F87B81B3C504C9A407543EC /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +83,8 @@
 				2171D5CA1A35EB260030CFA4 /* shibafoo-ios */,
 				2171D5E01A35EB260030CFA4 /* shibafoo-iosTests */,
 				2171D5C91A35EB260030CFA4 /* Products */,
+				CE70036CAFE915AB4722F243 /* Pods */,
+				5EA0A413A5E0527B99A87D46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,10 +100,17 @@
 		2171D5CA1A35EB260030CFA4 /* shibafoo-ios */ = {
 			isa = PBXGroup;
 			children = (
+				21FCF5B81B8DDF6D00E2F249 /* shibafoo-launch.png */,
 				2171D5CD1A35EB260030CFA4 /* AppDelegate.swift */,
-				2171D5CF1A35EB260030CFA4 /* ViewController.swift */,
 				2171D5D11A35EB260030CFA4 /* Main.storyboard */,
-				215F0D7C1A90F0F000EDA3A6 /* LoginViewController.swift */,
+				217D60E41B95EC9200577081 /* MyPostViewController.swift */,
+				217D60E21B95EC1800577081 /* LovedViewController.swift */,
+				212112851B974476009C93C5 /* ParsedPostCell.swift */,
+				217D60DA1B8FE70C00577081 /* LoginViewController.swift */,
+				217D60DC1B95E61500577081 /* HomeViewController.swift */,
+				212112831B973BCD009C93C5 /* ParsedPost.swift */,
+				217D60DE1B95E63E00577081 /* ReplyViewController.swift */,
+				217D60E01B95E68200577081 /* MainTabViewController.swift */,
 				2171D5D41A35EB260030CFA4 /* Images.xcassets */,
 				2171D5E11A35EB260030CFA4 /* Supporting Files */,
 				2171D5D61A35EB260030CFA4 /* LaunchScreen.xib */,
@@ -116,6 +144,23 @@
 			path = "shibafoo-iosTests";
 			sourceTree = SOURCE_ROOT;
 		};
+		5EA0A413A5E0527B99A87D46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				701779A930B90BD43F74030A /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE70036CAFE915AB4722F243 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C7387A3961F54987E7961CA /* Pods.debug.xcconfig */,
+				1CE47377E86EEC56891875CD /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2171D5E71A35EB260030CFA4 /* Build configuration list for PBXNativeTarget "shibafoo-ios" */;
 			buildPhases = (
+				9D9970D014B90B1D85372FDF /* Check Pods Manifest.lock */,
 				2171D5C41A35EB260030CFA4 /* Sources */,
 				2171D5C51A35EB260030CFA4 /* Frameworks */,
 				2171D5C61A35EB260030CFA4 /* Resources */,
+				71EF44928CFE3F28FACCAB98 /* Embed Pods Frameworks */,
+				9ECB3714C5204DE843509770 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2171D5D31A35EB260030CFA4 /* Main.storyboard in Resources */,
+				21FCF5B91B8DDF6D00E2F249 /* shibafoo-launch.png in Resources */,
 				2171D5D81A35EB260030CFA4 /* LaunchScreen.xib in Resources */,
 				2171D5D51A35EB260030CFA4 /* Images.xcassets in Resources */,
 			);
@@ -211,14 +260,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		71EF44928CFE3F28FACCAB98 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D9970D014B90B1D85372FDF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9ECB3714C5204DE843509770 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2171D5C41A35EB260030CFA4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				215F0D7D1A90F0F000EDA3A6 /* LoginViewController.swift in Sources */,
-				2171D5D01A35EB260030CFA4 /* ViewController.swift in Sources */,
+				217D60E51B95EC9200577081 /* MyPostViewController.swift in Sources */,
+				217D60E11B95E68200577081 /* MainTabViewController.swift in Sources */,
+				217D60E31B95EC1800577081 /* LovedViewController.swift in Sources */,
+				217D60DB1B8FE70C00577081 /* LoginViewController.swift in Sources */,
+				212112861B974476009C93C5 /* ParsedPostCell.swift in Sources */,
+				212112841B973BCD009C93C5 /* ParsedPost.swift in Sources */,
 				2171D5CE1A35EB260030CFA4 /* AppDelegate.swift in Sources */,
+				217D60DD1B95E61500577081 /* HomeViewController.swift in Sources */,
+				217D60DF1B95E63E00577081 /* ReplyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +444,7 @@
 		};
 		2171D5E81A35EB260030CFA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C7387A3961F54987E7961CA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "shibafoo-ios/Info.plist";
@@ -351,6 +455,7 @@
 		};
 		2171D5E91A35EB260030CFA4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CE47377E86EEC56891875CD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "shibafoo-ios/Info.plist";

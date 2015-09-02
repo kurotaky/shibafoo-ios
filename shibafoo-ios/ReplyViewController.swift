@@ -1,15 +1,14 @@
 //
-//  LoginViewController.swift
+//  ReplyViewController.swift
 //  shibafoo-ios
 //
-//  Created by usr0600244 on 2015/08/28.
+//  Created by usr0600244 on 2015/09/01.
 //  Copyright (c) 2015年 mo-fu. All rights reserved.
 //
 
 import UIKit
 
-// ログイン画面
-class LoginViewController: UIViewController {
+class ReplyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
