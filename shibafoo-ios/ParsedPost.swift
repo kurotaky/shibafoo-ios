@@ -11,17 +11,23 @@ import UIKit
 class ParsedPost: NSObject {
     var content: String?
     // var userName: String?
+    // var title: String?
+    var avatarURL: NSURL?
+    // ラブされた数
+    // リプライ数
     var createdAt: String?
     
-    init(content: String?, createdAt: String?) {
+    init(content: String?, createdAt: String?, avatarURL: NSURL?) {
         super.init()
         self.content = content
         self.createdAt = createdAt
+        self.avatarURL = avatarURL
     }
     
     override init() {
         super.init()
         self.content = ""
         self.createdAt = ""
+        self.avatarURL = nil
     }
 }
