@@ -63,7 +63,7 @@ class HomeViewController: UITableViewController {
                         contentsOfURL: parsedPost.avatarURL!)!)
                     dispatch_async(dispatch_get_main_queue(),
                         {
-                            //if cell.userNameLabel.text == parsedTweet.userName {
+                            //if cell.userNameLabel.text == parsedPost.userName {
                                 cell?.avatarImageView.image = avatarImage
                             //} else {
                             //    println("oops, wrong cell, never mind")
@@ -73,7 +73,6 @@ class HomeViewController: UITableViewController {
             )
             cell?.avatarImageView.image = UIImage (data: NSData(contentsOfURL: parsedPost.avatarURL!)!)
         }
-
         return cell!
     }
 
