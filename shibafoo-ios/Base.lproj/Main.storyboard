@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--みんなのログ-->
         <scene sceneID="fDk-US-LCb">
             <objects>
                 <tableViewController id="bLp-6I-jV3" customClass="HomeViewController" customModule="shibafoo_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,7 +100,7 @@
                             <outlet property="delegate" destination="bLp-6I-jV3" id="dl3-PW-DYk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="PQg-x8-N1M"/>
+                    <navigationItem key="navigationItem" title="みんなのログ" id="PQg-x8-N1M"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="reV-gG-Xey" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
