@@ -43,10 +43,6 @@ class HomeViewController: UITableViewController {
         return 1
     }
 
-//    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return "Section \(section)"
-//    }
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return parsedPosts.count
     }

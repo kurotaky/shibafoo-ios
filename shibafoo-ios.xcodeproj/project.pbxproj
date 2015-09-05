@@ -20,6 +20,7 @@
 		217D60E11B95E68200577081 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D60E01B95E68200577081 /* MainTabViewController.swift */; };
 		217D60E31B95EC1800577081 /* LovedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D60E21B95EC1800577081 /* LovedViewController.swift */; };
 		217D60E51B95EC9200577081 /* MyPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D60E41B95EC9200577081 /* MyPostViewController.swift */; };
+		21EA0E3E1B9AB51F00ED2DE7 /* test-logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E3D1B9AB51F00ED2DE7 /* test-logo.jpeg */; };
 		21FCF5B91B8DDF6D00E2F249 /* shibafoo-launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FCF5B81B8DDF6D00E2F249 /* shibafoo-launch.png */; };
 		4F87B81B3C504C9A407543EC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 701779A930B90BD43F74030A /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		217D60E01B95E68200577081 /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		217D60E21B95EC1800577081 /* LovedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LovedViewController.swift; sourceTree = "<group>"; };
 		217D60E41B95EC9200577081 /* MyPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostViewController.swift; sourceTree = "<group>"; };
+		21EA0E3D1B9AB51F00ED2DE7 /* test-logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "test-logo.jpeg"; sourceTree = "<group>"; };
 		21FCF5B81B8DDF6D00E2F249 /* shibafoo-launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shibafoo-launch.png"; sourceTree = "<group>"; };
 		6C7387A3961F54987E7961CA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		701779A930B90BD43F74030A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				21FCF5B81B8DDF6D00E2F249 /* shibafoo-launch.png */,
+				21EA0E3D1B9AB51F00ED2DE7 /* test-logo.jpeg */,
 				2171D5CD1A35EB260030CFA4 /* AppDelegate.swift */,
 				2171D5D11A35EB260030CFA4 /* Main.storyboard */,
 				217D60E41B95EC9200577081 /* MyPostViewController.swift */,
@@ -247,6 +250,7 @@
 				2171D5D31A35EB260030CFA4 /* Main.storyboard in Resources */,
 				21FCF5B91B8DDF6D00E2F249 /* shibafoo-launch.png in Resources */,
 				2171D5D81A35EB260030CFA4 /* LaunchScreen.xib in Resources */,
+				21EA0E3E1B9AB51F00ED2DE7 /* test-logo.jpeg in Resources */,
 				2171D5D51A35EB260030CFA4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
