@@ -9,24 +9,10 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shibafoo-launch.png" translatesAutoresizingMaskIntoConstraints="NO" id="l8d-HJ-hMA">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
-                </imageView>
-            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="l8d-HJ-hMA" secondAttribute="bottom" id="24g-cx-Vat"/>
-                <constraint firstAttribute="trailing" secondItem="l8d-HJ-hMA" secondAttribute="trailing" id="Yxh-vU-Jiz"/>
-                <constraint firstItem="l8d-HJ-hMA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="g9R-x5-QOF"/>
-                <constraint firstItem="l8d-HJ-hMA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iJN-4m-jiv"/>
-            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
-    <resources>
-        <image name="shibafoo-launch.png" width="320" height="566"/>
-    </resources>
 </document>

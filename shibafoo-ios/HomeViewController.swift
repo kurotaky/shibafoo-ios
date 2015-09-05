@@ -10,24 +10,25 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-let defaultAvatarURL = NSURL(string: "https://pbs.twimg.com/profile_images/479609750007468033/8YeHnMJk.jpeg")
+let defaultAvatarURL = NSURL(string: "https://shibafoo.s3.amazonaws.com/uploads/user_profile/avatar/1/45eb7049-93d5-4d6f-84da-dd233cbfb06a.jpg")
 
 class HomeViewController: UITableViewController {
 
     var parsedPosts : Array <ParsedPost> = [
-        ParsedPost(content:"shibafoo!!!! ", createdAt:"2015-08-20 16:44:30 JST", avatarURL: defaultAvatarURL),
-        ParsedPost(content:"シバフだ!", createdAt:"2015-08-22 10:44:30 JST", avatarURL: defaultAvatarURL),
-        ParsedPost(content:"こんにちは〜", createdAt:"2015-08-30 12:44:30 JST", avatarURL: defaultAvatarURL)
+//        ParsedPost(content:"shibafoo!!!! ", createdAt:"2015-08-20 16:44:30 JST", avatarURL: defaultAvatarURL),
+//        ParsedPost(content:"シバフだ!", createdAt:"2015-08-22 10:44:30 JST", avatarURL: defaultAvatarURL),
+//        ParsedPost(content:"こんにちは〜", createdAt:"2015-08-30 12:44:30 JST", avatarURL: defaultAvatarURL)
     ]
 
     @IBAction func handleRefresh(sender: AnyObject?) {
-        self.parsedPosts.append(ParsedPost(content: "New row", createdAt: NSDate().description, avatarURL: defaultAvatarURL))
+        self.parsedPosts.append(ParsedPost(content: "New row", createdAt: NSDate().description, avatarURL: defaultAvatarURL, nickname: "new", title: "title"))
         reloadPosts()
         refreshControl!.endRefreshing()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "みんなのログ"
         reloadPosts()
         var refresher = UIRefreshControl()
         refresher.addTarget(self, action: "handleRefresh:", forControlEvents: UIControlEvents.ValueChanged)
@@ -52,6 +53,8 @@ class HomeViewController: UITableViewController {
         let parsedPost = parsedPosts[indexPath.row]
         cell?.contentLabel.text = parsedPost.content
         cell?.createdAtLabel.text = parsedPost.createdAt
+        cell?.nicknameLabel.text = parsedPost.nickname
+        cell?.titleLabel.text = parsedPost.title
         if parsedPost.avatarURL != nil {
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
                 {() -> Void in
@@ -73,14 +76,14 @@ class HomeViewController: UITableViewController {
     }
 
     func reloadPosts() {
-        Alamofire.request(.GET, "http://localhost:3000/api/posts").responseJSON { _, _, data, _ in
+        // Alamofire.request(.GET, "http://localhost:3000/api/posts").responseJSON { _, _, data, _ in
+        Alamofire.request(.GET, "http://www.shibafoo.com/api/posts.json").responseJSON { _, _, data, _ in
             self.parsedPosts.removeAll(keepCapacity: true)
             if let jsonData: AnyObject = data {
                 let posts = JSON(jsonData)
                 for (key, post) in posts {
                     let parsedPost = ParsedPost()
                     parsedPost.content = post["content"].string
-                    // 作成時刻を変換。あとで処理を外に切り出す
                     let inputDateFormatter = NSDateFormatter()
                     inputDateFormatter.locale = NSLocale(localeIdentifier: "ja")
                     inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
@@ -88,8 +91,11 @@ class HomeViewController: UITableViewController {
                     let outputDateFormatter = NSDateFormatter()
                     outputDateFormatter.dateFormat = "yyy/MM/dd HH:mm"
                     parsedPost.createdAt = outputDateFormatter.stringFromDate(date!)
-                    // default画像を入れておく
-                    parsedPost.avatarURL = defaultAvatarURL
+                    if let avatarUrl = post["avatar_url"].string {
+                        parsedPost.avatarURL = NSURL(string: avatarUrl)
+                    }
+                    parsedPost.nickname = post["nickname"].string
+                    parsedPost.title = post["title"].string
                     self.parsedPosts.append(parsedPost)
                 }
                 dispatch_async(dispatch_get_main_queue(), { ()-> Void in self.tableView.reloadData() })

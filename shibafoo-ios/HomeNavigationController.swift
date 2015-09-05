@@ -1,18 +1,17 @@
 //
-//  ReplyViewController.swift
+//  HomeNavigationController.swift
 //  shibafoo-ios
 //
-//  Created by usr0600244 on 2015/09/01.
+//  Created by usr0600244 on 2015/09/05.
 //  Copyright (c) 2015年 mo-fu. All rights reserved.
 //
 
 import UIKit
 
-class ReplyViewController: UIViewController {
+class HomeNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
