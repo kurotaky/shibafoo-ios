@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonDidPush(sender: UIButton) {
         let email = emailTextField.text
         let password = passwordTextField.text
-        let loginUrl = "http://localhost:3000/users/sign_in.json"
+        let loginUrl = "http://www.shibafoo.com/users/sign_in.json"
         let params = ["user": ["email": email, "password": password]]
         Alamofire.request(.POST, loginUrl, parameters: params)
             .response { request, response, data, error in

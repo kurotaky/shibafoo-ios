@@ -27,6 +27,16 @@
 		21EA0E4A1B9B7BB800ED2DE7 /* timeline_icon_refoo.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E471B9B7BB800ED2DE7 /* timeline_icon_refoo.png */; };
 		21EA0E4B1B9B7BB800ED2DE7 /* timeline_icon_love_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E481B9B7BB800ED2DE7 /* timeline_icon_love_on.png */; };
 		21EA0E4C1B9B7BB800ED2DE7 /* timeline_icon_love_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E491B9B7BB800ED2DE7 /* timeline_icon_love_off.png */; };
+		21EA0E551B9BC12700ED2DE7 /* footer_icon_home_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E4D1B9BC12700ED2DE7 /* footer_icon_home_off.png */; };
+		21EA0E561B9BC12700ED2DE7 /* footer_icon_home_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E4E1B9BC12700ED2DE7 /* footer_icon_home_on.png */; };
+		21EA0E571B9BC12700ED2DE7 /* footer_icon_love_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E4F1B9BC12700ED2DE7 /* footer_icon_love_off.png */; };
+		21EA0E581B9BC12700ED2DE7 /* footer_icon_love_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E501B9BC12700ED2DE7 /* footer_icon_love_on.png */; };
+		21EA0E591B9BC12700ED2DE7 /* footer_icon_mylog_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E511B9BC12700ED2DE7 /* footer_icon_mylog_off.png */; };
+		21EA0E5A1B9BC12700ED2DE7 /* footer_icon_mylog_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E521B9BC12700ED2DE7 /* footer_icon_mylog_on.png */; };
+		21EA0E5B1B9BC12700ED2DE7 /* footer_icon_refoo_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E531B9BC12700ED2DE7 /* footer_icon_refoo_off.png */; };
+		21EA0E5C1B9BC12700ED2DE7 /* footer_icon_refoo_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E541B9BC12700ED2DE7 /* footer_icon_refoo_on.png */; };
+		21EA0E5E1B9BC53A00ED2DE7 /* ParsedReplyPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EA0E5D1B9BC53A00ED2DE7 /* ParsedReplyPost.swift */; };
+		21EA0E601B9BC57500ED2DE7 /* ParsedReplyPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EA0E5F1B9BC57500ED2DE7 /* ParsedReplyPostCell.swift */; };
 		21FCF5B91B8DDF6D00E2F249 /* shibafoo-launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FCF5B81B8DDF6D00E2F249 /* shibafoo-launch.png */; };
 		4F87B81B3C504C9A407543EC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 701779A930B90BD43F74030A /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -67,6 +77,16 @@
 		21EA0E471B9B7BB800ED2DE7 /* timeline_icon_refoo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeline_icon_refoo.png; sourceTree = "<group>"; };
 		21EA0E481B9B7BB800ED2DE7 /* timeline_icon_love_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeline_icon_love_on.png; sourceTree = "<group>"; };
 		21EA0E491B9B7BB800ED2DE7 /* timeline_icon_love_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeline_icon_love_off.png; sourceTree = "<group>"; };
+		21EA0E4D1B9BC12700ED2DE7 /* footer_icon_home_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footer_icon_home_off.png; sourceTree = "<group>"; };
+		21EA0E4E1B9BC12700ED2DE7 /* footer_icon_home_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footer_icon_home_on.png; sourceTree = "<group>"; };
+		21EA0E4F1B9BC12700ED2DE7 /* footer_icon_love_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footer_icon_love_off.png; sourceTree = "<group>"; };
+		21EA0E501B9BC12700ED2DE7 /* footer_icon_love_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footer_icon_love_on.png; sourceTree = "<group>"; };
+		21EA0E511B9BC12700ED2DE7 /* footer_icon_mylog_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footer_icon_mylog_off.png; sourceTree = "<group>"; };
+		21EA0E521B9BC12700ED2DE7 /* footer_icon_mylog_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footer_icon_mylog_on.png; sourceTree = "<group>"; };
+		21EA0E531B9BC12700ED2DE7 /* footer_icon_refoo_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footer_icon_refoo_off.png; sourceTree = "<group>"; };
+		21EA0E541B9BC12700ED2DE7 /* footer_icon_refoo_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footer_icon_refoo_on.png; sourceTree = "<group>"; };
+		21EA0E5D1B9BC53A00ED2DE7 /* ParsedReplyPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedReplyPost.swift; sourceTree = "<group>"; };
+		21EA0E5F1B9BC57500ED2DE7 /* ParsedReplyPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedReplyPostCell.swift; sourceTree = "<group>"; };
 		21FCF5B81B8DDF6D00E2F249 /* shibafoo-launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shibafoo-launch.png"; sourceTree = "<group>"; };
 		6C7387A3961F54987E7961CA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		701779A930B90BD43F74030A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,15 +141,25 @@
 				21EA0E471B9B7BB800ED2DE7 /* timeline_icon_refoo.png */,
 				21EA0E481B9B7BB800ED2DE7 /* timeline_icon_love_on.png */,
 				21EA0E491B9B7BB800ED2DE7 /* timeline_icon_love_off.png */,
+				21EA0E4D1B9BC12700ED2DE7 /* footer_icon_home_off.png */,
+				21EA0E4E1B9BC12700ED2DE7 /* footer_icon_home_on.png */,
+				21EA0E4F1B9BC12700ED2DE7 /* footer_icon_love_off.png */,
+				21EA0E501B9BC12700ED2DE7 /* footer_icon_love_on.png */,
+				21EA0E511B9BC12700ED2DE7 /* footer_icon_mylog_off.png */,
+				21EA0E521B9BC12700ED2DE7 /* footer_icon_mylog_on.png */,
+				21EA0E531B9BC12700ED2DE7 /* footer_icon_refoo_off.png */,
+				21EA0E541B9BC12700ED2DE7 /* footer_icon_refoo_on.png */,
 				2171D5CD1A35EB260030CFA4 /* AppDelegate.swift */,
 				2171D5D11A35EB260030CFA4 /* Main.storyboard */,
 				217D60E41B95EC9200577081 /* MyPostViewController.swift */,
 				217D60E21B95EC1800577081 /* LovedViewController.swift */,
 				212112851B974476009C93C5 /* ParsedPostCell.swift */,
+				21EA0E5F1B9BC57500ED2DE7 /* ParsedReplyPostCell.swift */,
 				217D60DA1B8FE70C00577081 /* LoginViewController.swift */,
 				217D60DC1B95E61500577081 /* HomeViewController.swift */,
 				21EA0E411B9B1C3C00ED2DE7 /* HomeNavigationController.swift */,
 				212112831B973BCD009C93C5 /* ParsedPost.swift */,
+				21EA0E5D1B9BC53A00ED2DE7 /* ParsedReplyPost.swift */,
 				217D60DE1B95E63E00577081 /* ReplyViewController.swift */,
 				217D60E01B95E68200577081 /* MainTabViewController.swift */,
 				2171D5D41A35EB260030CFA4 /* Images.xcassets */,
@@ -267,10 +297,18 @@
 			files = (
 				21EA0E441B9B35A400ED2DE7 /* shibafoo-logo1.pdf in Resources */,
 				21EA0E461B9B7ADE00ED2DE7 /* login_logo.png in Resources */,
+				21EA0E5B1B9BC12700ED2DE7 /* footer_icon_refoo_off.png in Resources */,
 				2171D5D31A35EB260030CFA4 /* Main.storyboard in Resources */,
 				21EA0E4A1B9B7BB800ED2DE7 /* timeline_icon_refoo.png in Resources */,
+				21EA0E581B9BC12700ED2DE7 /* footer_icon_love_on.png in Resources */,
+				21EA0E5A1B9BC12700ED2DE7 /* footer_icon_mylog_on.png in Resources */,
+				21EA0E591B9BC12700ED2DE7 /* footer_icon_mylog_off.png in Resources */,
+				21EA0E5C1B9BC12700ED2DE7 /* footer_icon_refoo_on.png in Resources */,
 				21EA0E4B1B9B7BB800ED2DE7 /* timeline_icon_love_on.png in Resources */,
+				21EA0E561B9BC12700ED2DE7 /* footer_icon_home_on.png in Resources */,
+				21EA0E551B9BC12700ED2DE7 /* footer_icon_home_off.png in Resources */,
 				21EA0E4C1B9B7BB800ED2DE7 /* timeline_icon_love_off.png in Resources */,
+				21EA0E571B9BC12700ED2DE7 /* footer_icon_love_off.png in Resources */,
 				21FCF5B91B8DDF6D00E2F249 /* shibafoo-launch.png in Resources */,
 				2171D5D81A35EB260030CFA4 /* LaunchScreen.xib in Resources */,
 				21EA0E3E1B9AB51F00ED2DE7 /* test-logo.jpeg in Resources */,
@@ -341,8 +379,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				21EA0E421B9B1C3C00ED2DE7 /* HomeNavigationController.swift in Sources */,
+				21EA0E601B9BC57500ED2DE7 /* ParsedReplyPostCell.swift in Sources */,
 				217D60E51B95EC9200577081 /* MyPostViewController.swift in Sources */,
 				217D60E11B95E68200577081 /* MainTabViewController.swift in Sources */,
+				21EA0E5E1B9BC53A00ED2DE7 /* ParsedReplyPost.swift in Sources */,
 				217D60E31B95EC1800577081 /* LovedViewController.swift in Sources */,
 				217D60DB1B8FE70C00577081 /* LoginViewController.swift in Sources */,
 				212112861B974476009C93C5 /* ParsedPostCell.swift in Sources */,

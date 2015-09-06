@@ -14,11 +14,7 @@ let defaultAvatarURL = NSURL(string: "https://shibafoo.s3.amazonaws.com/uploads/
 
 class HomeViewController: UITableViewController {
 
-    var parsedPosts : Array <ParsedPost> = [
-//        ParsedPost(content:"shibafoo!!!! ", createdAt:"2015-08-20 16:44:30 JST", avatarURL: defaultAvatarURL),
-//        ParsedPost(content:"シバフだ!", createdAt:"2015-08-22 10:44:30 JST", avatarURL: defaultAvatarURL),
-//        ParsedPost(content:"こんにちは〜", createdAt:"2015-08-30 12:44:30 JST", avatarURL: defaultAvatarURL)
-    ]
+    var parsedPosts : Array <ParsedPost> = []
 
     @IBAction func handleRefresh(sender: AnyObject?) {
         self.parsedPosts.append(ParsedPost(content: "New row", createdAt: NSDate().description, avatarURL: defaultAvatarURL, nickname: "new", title: "title"))

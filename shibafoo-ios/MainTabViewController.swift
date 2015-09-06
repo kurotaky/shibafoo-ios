@@ -33,7 +33,8 @@ class MainTabViewController: UITabBarController {
     
     func authenticationFromToken(token: String, email: String) {
         let params = ["authentication_token": token, "email": email]
-        Alamofire.request(.GET, "http://localhost:3000/api/posts", parameters: params)
+        Alamofire.request(.GET, "http://www.shibafoo.com/api/posts.json", parameters: params)
+        // Alamofire.request(.GET, "http://localhost:3000/api/posts", parameters: params)
             .response { request, response, data, error in
                 if response?.statusCode == 200 {
                     self.isAuthenticated = true
