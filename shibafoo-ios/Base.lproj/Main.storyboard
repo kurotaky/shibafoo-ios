@@ -8,13 +8,13 @@
         <!--Home View Controller-->
         <scene sceneID="fDk-US-LCb">
             <objects>
-                <tableViewController id="bLp-6I-jV3" customClass="HomeViewController" customModule="shibafoo_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="bLp-6I-jV3" customClass="HomeViewController" customModule="shibafoo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ew0-De-aN6">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomPostCell" rowHeight="140" id="d9w-Nz-n20" customClass="ParsedPostCell" customModule="shibafoo_ios" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomPostCell" rowHeight="140" id="d9w-Nz-n20" customClass="ParsedPostCell" customModule="shibafoo" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d9w-Nz-n20" id="Y3R-k3-fIV">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -108,18 +108,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="reV-gG-Xey" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850" y="368"/>
+            <point key="canvasLocation" x="826" y="352"/>
         </scene>
         <!--Reply View Controller-->
         <scene sceneID="RC0-gy-hwP">
             <objects>
-                <tableViewController id="Arr-wJ-tMq" customClass="ReplyViewController" customModule="shibafoo_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Arr-wJ-tMq" customClass="ReplyViewController" customModule="shibafoo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" sectionHeaderHeight="22" sectionFooterHeight="22" id="rMr-Ku-7Uk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomReplyPostCell" rowHeight="140" id="N9a-nO-qvv" customClass="ParsedReplyPostCell" customModule="shibafoo_ios" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomReplyPostCell" rowHeight="140" id="N9a-nO-qvv" customClass="ParsedReplyPostCell" customModule="shibafoo" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N9a-nO-qvv" id="zed-6R-4M7">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -218,11 +218,78 @@
             </objects>
             <point key="canvasLocation" x="779" y="1170"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Post View Controller-->
+        <scene sceneID="tOA-kX-7Kv">
+            <objects>
+                <viewController id="Kix-Hn-Ac9" customClass="PostViewController" customModule="shibafoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EPf-eB-dha"/>
+                        <viewControllerLayoutGuide type="bottom" id="HIz-ka-AUE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lvP-4R-1us">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGO-LR-fd0">
+                                <rect key="frame" x="562" y="28" width="30" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="×"/>
+                                <connections>
+                                    <segue destination="OUX-sQ-2Hs" kind="unwind" unwindAction="unwindToMainTabViewController:" id="j5X-9O-US0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwH-JV-a8s">
+                                <rect key="frame" x="0.0" y="266" width="600" height="65"/>
+                                <color key="backgroundColor" red="0.4549019608" green="0.73725490199999999" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="6IF-4h-Flx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Foo!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postDidPush:" destination="Kix-Hn-Ac9" eventType="touchUpInside" id="ibM-FM-q9R"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBI-X0-V8N">
+                                <rect key="frame" x="0.0" y="108" width="600" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="0tg-2F-m2X"/>
+                                    <constraint firstAttribute="height" constant="150" id="ZdU-UH-8oa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HIz-ka-AUE" firstAttribute="top" secondItem="pwH-JV-a8s" secondAttribute="bottom" constant="269" id="8C2-qV-Fv3"/>
+                            <constraint firstItem="MBI-X0-V8N" firstAttribute="leading" secondItem="lvP-4R-1us" secondAttribute="leading" id="8rB-5f-ur6"/>
+                            <constraint firstItem="XGO-LR-fd0" firstAttribute="trailing" secondItem="lvP-4R-1us" secondAttribute="trailingMargin" constant="8" id="B8S-e1-avS"/>
+                            <constraint firstItem="MBI-X0-V8N" firstAttribute="top" secondItem="XGO-LR-fd0" secondAttribute="bottom" constant="32" id="Eaj-wp-zOb"/>
+                            <constraint firstAttribute="trailing" secondItem="pwH-JV-a8s" secondAttribute="trailing" id="OvA-Hd-4uO"/>
+                            <constraint firstAttribute="trailing" secondItem="MBI-X0-V8N" secondAttribute="trailing" id="bMN-Uj-3Kt"/>
+                            <constraint firstItem="XGO-LR-fd0" firstAttribute="top" secondItem="EPf-eB-dha" secondAttribute="bottom" constant="8" id="j4z-Ga-Qqf"/>
+                            <constraint firstItem="pwH-JV-a8s" firstAttribute="leading" secondItem="lvP-4R-1us" secondAttribute="leading" id="tTj-z9-QJQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="postTextField" destination="MBI-X0-V8N" id="eKw-LP-wEX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jtS-vu-UQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="OUX-sQ-2Hs" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="-389"/>
+        </scene>
+        <!--ホーム-->
         <scene sceneID="1AQ-km-L4O">
             <objects>
                 <navigationController id="JUe-mx-8z2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="n3c-8E-U9g"/>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="footer_icon_home_on.png" id="n3c-8E-U9g"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9b8-pS-Mpk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -238,11 +305,11 @@
             </objects>
             <point key="canvasLocation" x="49" y="368"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--ReFoo!-->
         <scene sceneID="vBE-Te-LWd">
             <objects>
                 <navigationController id="RQH-EG-dqM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="M57-Es-7Xz"/>
+                    <tabBarItem key="tabBarItem" title="ReFoo!" image="footer_icon_refoo_off.png" id="M57-Es-7Xz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EbU-k5-Yo6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -272,12 +339,27 @@
             </objects>
             <point key="canvasLocation" x="-1421" y="506"/>
         </scene>
-        <!--シバフ-->
+        <!--Main Tab View Controller-->
         <scene sceneID="TJ1-kh-ilL">
             <objects>
-                <tabBarController id="LNa-Lg-8xh" customClass="MainTabViewController" customModule="shibafoo_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="シバフ" id="h34-EJ-CZ9">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="y80-OM-0GR"/>
+                <tabBarController id="LNa-Lg-8xh" customClass="MainTabViewController" customModule="shibafoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="h34-EJ-CZ9">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Biz-g7-oDF">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="みんなのログ"/>
+                                <segment title="友達のログ"/>
+                            </segments>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" image="header_icon_foo.png" id="iWt-on-4y5">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="Kix-Hn-Ac9" kind="presentation" id="7Xs-zh-XqB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Geu-pz-fzf">
@@ -297,7 +379,6 @@
         <!--Navigation Controller-->
         <scene sceneID="S2d-6t-Gkb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DrI-NR-8Gb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="LoginNavigationController" id="SOz-4j-UUg" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SFe-0n-YB0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -307,13 +388,14 @@
                         <segue destination="K0F-rb-kmq" kind="relationship" relationship="rootViewController" id="CLK-xn-nW1"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DrI-NR-8Gb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1633" y="-291"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="5XG-3B-ixP">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="K0F-rb-kmq" customClass="LoginViewController" customModule="shibafoo_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="K0F-rb-kmq" customClass="LoginViewController" customModule="shibafoo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uA8-9J-39Z"/>
                         <viewControllerLayoutGuide type="bottom" id="nP7-oS-EFy"/>
@@ -383,6 +465,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="footer_icon_home_on.png" width="44" height="40"/>
+        <image name="footer_icon_refoo_off.png" width="44" height="40"/>
+        <image name="header_icon_foo.png" width="40" height="43"/>
         <image name="login_logo.png" width="318" height="248"/>
         <image name="timeline_icon_love_off.png" width="24" height="22"/>
         <image name="timeline_icon_refoo.png" width="26" height="22"/>

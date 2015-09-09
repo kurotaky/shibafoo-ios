@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2171D5C71A35EB260030CFA4"
-               BuildableName = "shibafoo-ios.app"
-               BlueprintName = "shibafoo-ios"
-               ReferencedContainer = "container:shibafoo-ios.xcodeproj">
+               BuildableName = "shibafoo.app"
+               BlueprintName = "shibafoo"
+               ReferencedContainer = "container:shibafoo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2171D5DC1A35EB260030CFA4"
-               BuildableName = "shibafoo-iosTests.xctest"
-               BlueprintName = "shibafoo-iosTests"
-               ReferencedContainer = "container:shibafoo-ios.xcodeproj">
+               BuildableName = "shibafooTests.xctest"
+               BlueprintName = "shibafooTests"
+               ReferencedContainer = "container:shibafoo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2171D5DC1A35EB260030CFA4"
-               BuildableName = "shibafoo-iosTests.xctest"
-               BlueprintName = "shibafoo-iosTests"
-               ReferencedContainer = "container:shibafoo-ios.xcodeproj">
+               BuildableName = "shibafooTests.xctest"
+               BlueprintName = "shibafooTests"
+               ReferencedContainer = "container:shibafoo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2171D5C71A35EB260030CFA4"
-            BuildableName = "shibafoo-ios.app"
-            BlueprintName = "shibafoo-ios"
-            ReferencedContainer = "container:shibafoo-ios.xcodeproj">
+            BuildableName = "shibafoo.app"
+            BlueprintName = "shibafoo"
+            ReferencedContainer = "container:shibafoo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -72,13 +72,14 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2171D5C71A35EB260030CFA4"
-            BuildableName = "shibafoo-ios.app"
-            BlueprintName = "shibafoo-ios"
-            ReferencedContainer = "container:shibafoo-ios.xcodeproj">
+            BuildableName = "shibafoo.app"
+            BlueprintName = "shibafoo"
+            ReferencedContainer = "container:shibafoo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -90,13 +91,14 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2171D5C71A35EB260030CFA4"
-            BuildableName = "shibafoo-ios.app"
-            BlueprintName = "shibafoo-ios"
-            ReferencedContainer = "container:shibafoo-ios.xcodeproj">
+            BuildableName = "shibafoo.app"
+            BlueprintName = "shibafoo"
+            ReferencedContainer = "container:shibafoo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
@@ -105,6 +107,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "Shibafoo"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

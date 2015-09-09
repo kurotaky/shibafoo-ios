@@ -58,11 +58,7 @@ class HomeViewController: UITableViewController {
                         contentsOfURL: parsedPost.avatarURL!)!)
                     dispatch_async(dispatch_get_main_queue(),
                         {
-                            //if cell.userNameLabel.text == parsedPost.userName {
-                                cell?.avatarImageView.image = avatarImage
-                            //} else {
-                            //    println("oops, wrong cell, never mind")
-                            //}
+                            cell?.avatarImageView.image = avatarImage
                     })
                 }
             )

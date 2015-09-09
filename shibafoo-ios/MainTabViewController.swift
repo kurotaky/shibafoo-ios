@@ -54,6 +54,8 @@ class MainTabViewController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func unwindToMainTabViewController(segue: UIStoryboardSegue) {
+    }
 
     /*
     // MARK: - Navigation
@@ -64,5 +66,4 @@ class MainTabViewController: UITabBarController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
