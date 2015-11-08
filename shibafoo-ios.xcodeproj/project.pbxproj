@@ -58,13 +58,13 @@
 		1CE47377E86EEC56891875CD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		212112831B973BCD009C93C5 /* ParsedPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedPost.swift; sourceTree = "<group>"; };
 		212112851B974476009C93C5 /* ParsedPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedPostCell.swift; sourceTree = "<group>"; };
-		2171D5C81A35EB260030CFA4 /* shibafoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shibafoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2171D5C81A35EB260030CFA4 /* shibafoo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "shibafoo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2171D5CC1A35EB260030CFA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2171D5CD1A35EB260030CFA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2171D5D21A35EB260030CFA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2171D5D41A35EB260030CFA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2171D5D71A35EB260030CFA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		2171D5DD1A35EB260030CFA4 /* shibafooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shibafooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2171D5DD1A35EB260030CFA4 /* shibafoo-ios.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "shibafoo-ios.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2171D5E21A35EB260030CFA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2171D5E31A35EB260030CFA4 /* shibafoo_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shibafoo_iosTests.swift; sourceTree = "<group>"; };
 		217D60DA1B8FE70C00577081 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -131,8 +131,8 @@
 		2171D5C91A35EB260030CFA4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2171D5C81A35EB260030CFA4 /* shibafoo.app */,
-				2171D5DD1A35EB260030CFA4 /* shibafooTests.xctest */,
+				2171D5C81A35EB260030CFA4 /* shibafoo-ios.app */,
+				2171D5DD1A35EB260030CFA4 /* shibafoo-ios.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -248,9 +248,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2171D5C71A35EB260030CFA4 /* shibafoo */ = {
+		2171D5C71A35EB260030CFA4 /* shibafoo-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2171D5E71A35EB260030CFA4 /* Build configuration list for PBXNativeTarget "shibafoo" */;
+			buildConfigurationList = 2171D5E71A35EB260030CFA4 /* Build configuration list for PBXNativeTarget "shibafoo-ios" */;
 			buildPhases = (
 				9D9970D014B90B1D85372FDF /* Check Pods Manifest.lock */,
 				2171D5C41A35EB260030CFA4 /* Sources */,
@@ -263,14 +263,14 @@
 			);
 			dependencies = (
 			);
-			name = shibafoo;
+			name = "shibafoo-ios";
 			productName = "shibafoo-ios";
-			productReference = 2171D5C81A35EB260030CFA4 /* shibafoo.app */;
+			productReference = 2171D5C81A35EB260030CFA4 /* shibafoo-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2171D5DC1A35EB260030CFA4 /* shibafooTests */ = {
+		2171D5DC1A35EB260030CFA4 /* shibafoo-iosTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2171D5EA1A35EB260030CFA4 /* Build configuration list for PBXNativeTarget "shibafooTests" */;
+			buildConfigurationList = 2171D5EA1A35EB260030CFA4 /* Build configuration list for PBXNativeTarget "shibafoo-iosTests" */;
 			buildPhases = (
 				2171D5D91A35EB260030CFA4 /* Sources */,
 				2171D5DA1A35EB260030CFA4 /* Frameworks */,
@@ -281,9 +281,9 @@
 			dependencies = (
 				2171D5DF1A35EB260030CFA4 /* PBXTargetDependency */,
 			);
-			name = shibafooTests;
+			name = "shibafoo-iosTests";
 			productName = "shibafoo-iosTests";
-			productReference = 2171D5DD1A35EB260030CFA4 /* shibafooTests.xctest */;
+			productReference = 2171D5DD1A35EB260030CFA4 /* shibafoo-ios.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -292,7 +292,8 @@
 		2171D5C01A35EB260030CFA4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "mo-fu";
 				TargetAttributes = {
 					2171D5C71A35EB260030CFA4 = {
@@ -306,7 +307,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2171D5C31A35EB260030CFA4 /* Build configuration list for PBXProject "shibafoo" */;
+			buildConfigurationList = 2171D5C31A35EB260030CFA4 /* Build configuration list for PBXProject "shibafoo-ios" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -319,8 +320,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2171D5C71A35EB260030CFA4 /* shibafoo */,
-				2171D5DC1A35EB260030CFA4 /* shibafooTests */,
+				2171D5C71A35EB260030CFA4 /* shibafoo-ios */,
+				2171D5DC1A35EB260030CFA4 /* shibafoo-iosTests */,
 			);
 		};
 /* End PBXProject section */
@@ -444,7 +445,7 @@
 /* Begin PBXTargetDependency section */
 		2171D5DF1A35EB260030CFA4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2171D5C71A35EB260030CFA4 /* shibafoo */;
+			target = 2171D5C71A35EB260030CFA4 /* shibafoo-ios */;
 			targetProxy = 2171D5DE1A35EB260030CFA4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -489,6 +490,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -561,7 +563,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "shibafoo-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = shibafoo;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.mo-fu.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "shibafoo-ios";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -577,7 +580,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "shibafoo-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = shibafoo;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.mo-fu.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "shibafoo-ios";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -589,17 +593,15 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "shibafoo-iosTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = shibafooTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.mo-fu.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "shibafoo-ios";
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/shibafoo-ios.app/shibafoo-ios";
 			};
@@ -611,13 +613,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "shibafoo-iosTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = shibafooTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.mo-fu.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "shibafoo-ios";
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/shibafoo-ios.app/shibafoo-ios";
 			};
@@ -626,7 +626,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2171D5C31A35EB260030CFA4 /* Build configuration list for PBXProject "shibafoo" */ = {
+		2171D5C31A35EB260030CFA4 /* Build configuration list for PBXProject "shibafoo-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2171D5E51A35EB260030CFA4 /* Debug */,
@@ -635,7 +635,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2171D5E71A35EB260030CFA4 /* Build configuration list for PBXNativeTarget "shibafoo" */ = {
+		2171D5E71A35EB260030CFA4 /* Build configuration list for PBXNativeTarget "shibafoo-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2171D5E81A35EB260030CFA4 /* Debug */,
@@ -644,7 +644,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2171D5EA1A35EB260030CFA4 /* Build configuration list for PBXNativeTarget "shibafooTests" */ = {
+		2171D5EA1A35EB260030CFA4 /* Build configuration list for PBXNativeTarget "shibafoo-iosTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2171D5EB1A35EB260030CFA4 /* Debug */,

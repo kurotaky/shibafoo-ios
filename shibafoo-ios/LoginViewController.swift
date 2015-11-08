@@ -30,26 +30,30 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonDidPush(sender: UIButton) {
         let email = emailTextField.text
         let password = passwordTextField.text
-        let loginUrl = "http://www.shibafoo.com/users/sign_in.json"
-        let params = ["user": ["email": email, "password": password]]
+//        let loginUrl = "http://www.shibafoo.com/users/sign_in.json"
+        let loginUrl = "https://shibafoo-shibafoo.sqale.jp/users/sign_in.json"
+        let params = ["user": ["email": email!, "password": password!] as AnyObject]
         Alamofire.request(.POST, loginUrl, parameters: params)
-            .response { request, response, data, error in
-                if response?.statusCode == 201 {
-                    let json = JSON(data: data!)
-                    let token: String? = json["authentication_token"].string
-                    let userDefaults = NSUserDefaults.standardUserDefaults()
-                    userDefaults.setObject(token!, forKey: "authentication_token")
-                    userDefaults.setObject(email, forKey: "email")
-                    userDefaults.synchronize()
-                    let navigationController = self.storyboard?.instantiateViewControllerWithIdentifier("MainTabNavigationController") as? UINavigationController
-                    self.navigationController?.presentViewController(navigationController!, animated: true, completion: nil)
+            .responseJSON { response in
+                if response.response?.statusCode == 201 {
+                    if let json: AnyObject = response.result.value {
+                      let token = json["authentication_token"]
+                      let userDefaults = NSUserDefaults.standardUserDefaults()
+                      userDefaults.setObject(token!, forKey: "authentication_token")
+                      userDefaults.setObject(email, forKey: "email")
+                      userDefaults.synchronize()
+                      let navigationController = self.storyboard?.instantiateViewControllerWithIdentifier("MainTabNavigationController") as? UINavigationController
+                      self.navigationController?.presentViewController(navigationController!, animated: true, completion: nil)
+                    }
                 } else {
                     // アラート、APIのerror messageを表示
-                    let json = JSON(data: data!)
-                    let errorMessage: String? = json["error"].string
-                    let alertController = UIAlertController(title: "エラー", message: errorMessage!, preferredStyle: UIAlertControllerStyle.Alert)
-                    alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
-                    self.navigationController?.presentViewController(alertController, animated: true, completion: nil)
+                    print(response.result.value)
+                    if let json: AnyObject = response.result.value {
+                      let errorMessage = json["error"] as! String
+                      let alertController = UIAlertController(title: "エラー", message: errorMessage, preferredStyle: UIAlertControllerStyle.Alert)
+                      alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
+                      self.navigationController?.presentViewController(alertController, animated: true, completion: nil)
+                    }
                 }
         }
     }

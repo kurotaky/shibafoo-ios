@@ -24,7 +24,7 @@ class ReplyViewController: UITableViewController {
         super.viewDidLoad()
         self.navigationItem.title = "ReFoo!"
         reloadPosts()
-        var refresher = UIRefreshControl()
+        let refresher = UIRefreshControl()
         refresher.addTarget(self, action: "handleRefresh:", forControlEvents: UIControlEvents.ValueChanged)
         self.refreshControl = refresher
     }
@@ -69,11 +69,11 @@ class ReplyViewController: UITableViewController {
         let userDefault = NSUserDefaults.standardUserDefaults()
         let token = userDefault.objectForKey("authentication_token") as? String
         let email = userDefault.objectForKey("email") as? String
-        Alamofire.request(.GET, "http://www.shibafoo.com/api/posts/reply", parameters: ["email": email!, "token": token!]).responseJSON { _, _, data, _ in
+        Alamofire.request(.GET, "https://shibafoo-shibafoo.sqale.jp/api/posts/reply", parameters: ["email": email!, "token": token!]).responseJSON { data in
             self.parsedReplyPosts.removeAll(keepCapacity: true)
-            if let jsonData: AnyObject = data {
-                let posts = JSON(jsonData)
-                for (key, post) in posts {
+            if let jsonData: Response<AnyObject, NSError> = data {
+                let posts = JSON(jsonData.data!)
+                for (_, post) in posts {
                     let parsedReplyPost = ParsedReplyPost()
                     parsedReplyPost.content = post["content"].string
                     let inputDateFormatter = NSDateFormatter()

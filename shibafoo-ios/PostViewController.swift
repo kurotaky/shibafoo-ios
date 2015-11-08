@@ -15,7 +15,7 @@ class PostViewController: UIViewController {
     @IBOutlet weak var postTextField: UITextView!
     @IBAction func postDidPush(sender: UIButton) {
         let content = postTextField.text
-        let postUrl = "http://www.shibafoo.com/api/posts"
+        let postUrl = "https://shibafoo-shibafoo.sqale.jp/api/posts"
         let userDefault = NSUserDefaults.standardUserDefaults()
         let token = userDefault.objectForKey("authentication_token") as? String
         let email = userDefault.objectForKey("email") as? String
