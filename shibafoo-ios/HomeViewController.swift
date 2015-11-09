@@ -52,17 +52,25 @@ class HomeViewController: UITableViewController {
         cell?.nicknameLabel.text = parsedPost.nickname
         cell?.titleLabel.text = parsedPost.title
         if parsedPost.avatarURL != nil {
-            print(NSData(contentsOfURL: parsedPost.avatarURL!))
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
-                {() -> Void in
-                    let avatarImage = UIImage(data: NSData(contentsOfURL: parsedPost.avatarURL!)!)
-                    dispatch_async(dispatch_get_main_queue(),
-                        {
-                            cell?.avatarImageView.image = avatarImage
-                    })
-                }
-            )
-            cell?.avatarImageView.image = UIImage (data: NSData(contentsOfURL: parsedPost.avatarURL!)!)
+            var optData:NSData? = nil
+            do {
+                optData = try NSData(contentsOfURL: parsedPost.avatarURL!, options: NSDataReadingOptions.DataReadingMappedIfSafe)
+            }
+            catch {
+                print("Handle \(error) here")
+            }
+            if let data = optData {
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+                    {() -> Void in
+                        let avatarImage = UIImage(data: data)
+                        dispatch_async(dispatch_get_main_queue(),
+                            {
+                                cell?.avatarImageView.image = avatarImage
+                        })
+                    }
+                )
+                cell?.avatarImageView.image = UIImage(data: data)
+            }
         }
         return cell!
     }
