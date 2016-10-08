@@ -13,20 +13,20 @@ import SwiftyJSON
 class PostViewController: UIViewController {
 
     @IBOutlet weak var postTextField: UITextView!
-    @IBAction func postDidPush(sender: UIButton) {
+    @IBAction func postDidPush(_ sender: UIButton) {
         let content = postTextField.text
         let postUrl = "https://shibafoo-shibafoo.sqale.jp/api/posts"
-        let userDefault = NSUserDefaults.standardUserDefaults()
-        let token = userDefault.objectForKey("authentication_token") as? String
-        let email = userDefault.objectForKey("email") as? String
+        let userDefault = UserDefaults.standard
+        let token = userDefault.object(forKey: "authentication_token") as? String
+        let email = userDefault.object(forKey: "email") as? String
         let params = ["content": content!, "email": email!, "token": token!]
-        Alamofire.request(.POST, postUrl, parameters: params)
-            .response { request, response, data, error in
-                if response?.statusCode == 200 {
+        Alamofire.request(postUrl, method: .post, parameters: params)
+            .responseJSON { response in
+                if (response.result.value != nil) {
                     // unwind segue
                     print("Success!")
                 } else {
-                    print("Error: \(response) \(data)")
+                    print("Error: \(response.data)")
                 }
         }
     }

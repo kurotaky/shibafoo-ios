@@ -9,7 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-shibafoo-ios.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>651B0BDA8043238CCAD30D1FBB417232</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B9A04D3C9B208813656510FDA8ADAE02</key>
+		<key>C537C1A086A7462BED3E2F322007067D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F9084056D4E977329673CEE62BA939A3</key>
+		<key>E568C94C0781800B6D8E1790E5929C9A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

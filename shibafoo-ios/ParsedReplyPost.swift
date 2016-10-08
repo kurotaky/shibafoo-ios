@@ -12,12 +12,12 @@ class ParsedReplyPost: NSObject {
     var content: String?
     var nickname: String?
     var title: String?
-    var avatarURL: NSURL?
+    var avatarURL: URL?
     // ラブされた数
     // リプライ数
     var createdAt: String?
     
-    init(content: String?, createdAt: String?, avatarURL: NSURL?, nickname: String?, title: String) {
+    init(content: String?, createdAt: String?, avatarURL: URL?, nickname: String?, title: String) {
         super.init()
         self.content = content
         self.nickname = nickname

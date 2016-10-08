@@ -14,8 +14,8 @@ class ReplyViewController: UITableViewController {
 
     var parsedReplyPosts : Array <ParsedReplyPost> = []
     
-    @IBAction func handleRefresh(sender: AnyObject?) {
-        self.parsedReplyPosts.append(ParsedReplyPost(content: "New row", createdAt: NSDate().description, avatarURL: defaultAvatarURL, nickname: "new", title: "title"))
+    @IBAction func handleRefresh(_ sender: AnyObject?) {
+        self.parsedReplyPosts.append(ParsedReplyPost(content: "New row", createdAt: Date().description, avatarURL: defaultAvatarURL, nickname: "new", title: "title"))
         reloadPosts()
         refreshControl!.endRefreshing()
     }
@@ -25,7 +25,7 @@ class ReplyViewController: UITableViewController {
         self.navigationItem.title = "ReFoo!"
         reloadPosts()
         let refresher = UIRefreshControl()
-        refresher.addTarget(self, action: "handleRefresh:", forControlEvents: UIControlEvents.ValueChanged)
+        refresher.addTarget(self, action: #selector(ReplyViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
         self.refreshControl = refresher
     }
 
@@ -34,63 +34,62 @@ class ReplyViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return parsedReplyPosts.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CustomReplyPostCell") as? ParsedReplyPostCell
-        let parsedReplyPost = parsedReplyPosts[indexPath.row]
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomReplyPostCell") as? ParsedReplyPostCell
+        let parsedReplyPost = parsedReplyPosts[(indexPath as NSIndexPath).row]
         cell?.contentLabel.text = parsedReplyPost.content
         cell?.createdAtLabel.text = parsedReplyPost.createdAt
         cell?.nicknameLabel.text = parsedReplyPost.nickname
         cell?.titleLabel.text = parsedReplyPost.title
         if parsedReplyPost.avatarURL != nil {
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
-                {() -> Void in
-                    let avatarImage = UIImage(data: NSData (
-                        contentsOfURL: parsedReplyPost.avatarURL!)!)
-                    dispatch_async(dispatch_get_main_queue(),
-                        {
+            DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async(execute: {() -> Void in
+                    let avatarImage = UIImage(data: try! Data (
+                        contentsOf: parsedReplyPost.avatarURL! as URL))
+                    DispatchQueue.main.async(execute: {
                             cell?.avatarImageView.image = avatarImage
                     })
                 }
             )
-            cell?.avatarImageView.image = UIImage (data: NSData(contentsOfURL: parsedReplyPost.avatarURL!)!)
-        }
+            cell?.avatarImageView.image = UIImage (data: try! Data(contentsOf: parsedReplyPost.avatarURL! as URL))
+       }
         return cell!
     }
 
     func reloadPosts() {
-        let userDefault = NSUserDefaults.standardUserDefaults()
-        let token = userDefault.objectForKey("authentication_token") as? String
-        let email = userDefault.objectForKey("email") as? String
-        Alamofire.request(.GET, "https://shibafoo-shibafoo.sqale.jp/api/posts/reply", parameters: ["email": email!, "token": token!]).responseJSON { data in
-            self.parsedReplyPosts.removeAll(keepCapacity: true)
-            if let jsonData: Response<AnyObject, NSError> = data {
+        let userDefault = UserDefaults.standard
+        let token = userDefault.object(forKey: "authentication_token") as? String
+        let email = userDefault.object(forKey: "email") as? String
+        Alamofire.request("https://shibafoo-shibafoo.sqale.jp/api/posts/reply", parameters: ["email": email!, "token": token!])
+            .responseJSON { data in
+              self.parsedReplyPosts.removeAll(keepingCapacity: true)
+                if let jsonData: DataResponse<Any> = data as DataResponse? {
                 let posts = JSON(jsonData.data!)
                 for (_, post) in posts {
                     let parsedReplyPost = ParsedReplyPost()
                     parsedReplyPost.content = post["content"].string
-                    let inputDateFormatter = NSDateFormatter()
-                    inputDateFormatter.locale = NSLocale(localeIdentifier: "ja")
+                    let inputDateFormatter = DateFormatter()
+                    inputDateFormatter.locale = Locale(identifier: "ja")
                     inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-                    let date: NSDate? = inputDateFormatter.dateFromString(post["created_at"].string!)
-                    let outputDateFormatter = NSDateFormatter()
+                    let date: Date? = inputDateFormatter.date(from: post["created_at"].string!)
+                    let outputDateFormatter = DateFormatter()
                     outputDateFormatter.dateFormat = "yyy/MM/dd HH:mm"
-                    parsedReplyPost.createdAt = outputDateFormatter.stringFromDate(date!)
+                    parsedReplyPost.createdAt = outputDateFormatter.string(from: date!)
                     if let avatarUrl = post["avatar_url"].string {
-                        parsedReplyPost.avatarURL = NSURL(string: avatarUrl)
+                        parsedReplyPost.avatarURL = URL(string: avatarUrl)
                     }
                     parsedReplyPost.nickname = post["nickname"].string
                     parsedReplyPost.title = post["title"].string
                     self.parsedReplyPosts.append(parsedReplyPost)
                 }
-                dispatch_async(dispatch_get_main_queue(), { ()-> Void in self.tableView.reloadData() })
+                DispatchQueue.main.async(execute: { ()-> Void in self.tableView.reloadData() })
             }
         }
     }

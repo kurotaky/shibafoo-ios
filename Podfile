@@ -1,6 +1,9 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '6.0'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
 use_frameworks!
 
-pod 'Alamofire'
-pod 'SwiftyJSON'
+target 'shibafoo-ios' do
+  pod 'Alamofire', '~> 4.0'
+  pod 'SwiftyJSON'
+end

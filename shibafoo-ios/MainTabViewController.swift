@@ -15,36 +15,36 @@ class MainTabViewController: UITabBarController {
         super.viewDidLoad()
     }
     
-    private var isAuthenticated = false
+    fileprivate var isAuthenticated = false
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         // トークンがセットされていたらAPIにtokenとemailを送って認証する
-        let userDefault = NSUserDefaults.standardUserDefaults()
-        if let token = userDefault.objectForKey("authentication_token") as? String {
-            if let email = userDefault.objectForKey("email") as? String {
+        let userDefault = UserDefaults.standard
+        if let token = userDefault.object(forKey: "authentication_token") as? String {
+            if let email = userDefault.object(forKey: "email") as? String {
                 authenticationFromToken(token, email: email)
             }
         } else {
             // tokenがない場合はログイン画面を表示
-            let navigationController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginNavigationController") as? UINavigationController
-            self.navigationController?.presentViewController(navigationController!, animated: true, completion: nil)
+            let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "LoginNavigationController") as? UINavigationController
+            self.navigationController?.present(navigationController!, animated: true, completion: nil)
         }
     }
     
-    func authenticationFromToken(token: String, email: String) {
+    func authenticationFromToken(_ token: String, email: String) {
         let params = ["authentication_token": token, "email": email]
-        Alamofire.request(.GET, "https://shibafoo-shibafoo.sqale.jp/api/posts.json", parameters: params)
-        // Alamofire.request(.GET, "http://localhost:3000/api/posts", parameters: params)
-            .response { request, response, data, error in
-                if response?.statusCode == 200 {
+        Alamofire.request("https://shibafoo-shibafoo.sqale.jp/api/posts.json", parameters: params)
+            .responseJSON { response in
+                if response.result.value != nil {
                     self.isAuthenticated = true
                 } else {
                     self.isAuthenticated = false
                 }
+                
                 if !self.isAuthenticated {
                     // 認証していない場合はログイン画面を表示
-                    let navigationController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginNavigationController") as? UINavigationController
-                    self.navigationController?.presentViewController(navigationController!, animated: true, completion: nil)
+                    let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "LoginNavigationController") as? UINavigationController
+                    self.navigationController?.present(navigationController!, animated: true, completion: nil)
                 }
         }
     }
@@ -54,7 +54,7 @@ class MainTabViewController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func unwindToMainTabViewController(segue: UIStoryboardSegue) {
+    @IBAction func unwindToMainTabViewController(_ segue: UIStoryboardSegue) {
     }
 
     /*

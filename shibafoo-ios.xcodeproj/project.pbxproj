@@ -41,7 +41,7 @@
 		21EA0E621B9BCED300ED2DE7 /* header_icon_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E611B9BCED300ED2DE7 /* header_icon_menu.png */; };
 		21EA0E641B9BCF1700ED2DE7 /* header_icon_foo.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E631B9BCF1700ED2DE7 /* header_icon_foo.png */; };
 		21FCF5B91B8DDF6D00E2F249 /* shibafoo-launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FCF5B81B8DDF6D00E2F249 /* shibafoo-launch.png */; };
-		4F87B81B3C504C9A407543EC /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 701779A930B90BD43F74030A /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B3A34B69F237DEABB8B60A4E /* Pods_shibafoo_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1F284366E773CFBCFE3570 /* Pods_shibafoo_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1CE47377E86EEC56891875CD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		212112831B973BCD009C93C5 /* ParsedPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedPost.swift; sourceTree = "<group>"; };
 		212112851B974476009C93C5 /* ParsedPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedPostCell.swift; sourceTree = "<group>"; };
 		2171D5C81A35EB260030CFA4 /* shibafoo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "shibafoo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,8 +93,10 @@
 		21EA0E611B9BCED300ED2DE7 /* header_icon_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_icon_menu.png; sourceTree = "<group>"; };
 		21EA0E631B9BCF1700ED2DE7 /* header_icon_foo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_icon_foo.png; sourceTree = "<group>"; };
 		21FCF5B81B8DDF6D00E2F249 /* shibafoo-launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shibafoo-launch.png"; sourceTree = "<group>"; };
-		6C7387A3961F54987E7961CA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		38B7032D03625FD78C606856 /* Pods-shibafoo-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shibafoo-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-shibafoo-ios/Pods-shibafoo-ios.release.xcconfig"; sourceTree = "<group>"; };
+		6B1F284366E773CFBCFE3570 /* Pods_shibafoo_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shibafoo_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		701779A930B90BD43F74030A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9604E575D1E3294F5DD7CA6C /* Pods-shibafoo-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shibafoo-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-shibafoo-ios/Pods-shibafoo-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F87B81B3C504C9A407543EC /* Pods.framework in Frameworks */,
+				B3A34B69F237DEABB8B60A4E /* Pods_shibafoo_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +124,8 @@
 				2171D5CA1A35EB260030CFA4 /* shibafoo-ios */,
 				2171D5E01A35EB260030CFA4 /* shibafoo-iosTests */,
 				2171D5C91A35EB260030CFA4 /* Products */,
-				CE70036CAFE915AB4722F243 /* Pods */,
 				5EA0A413A5E0527B99A87D46 /* Frameworks */,
+				9F77144B04FE5FCEF65065EE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -232,15 +233,16 @@
 			isa = PBXGroup;
 			children = (
 				701779A930B90BD43F74030A /* Pods.framework */,
+				6B1F284366E773CFBCFE3570 /* Pods_shibafoo_ios.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CE70036CAFE915AB4722F243 /* Pods */ = {
+		9F77144B04FE5FCEF65065EE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6C7387A3961F54987E7961CA /* Pods.debug.xcconfig */,
-				1CE47377E86EEC56891875CD /* Pods.release.xcconfig */,
+				9604E575D1E3294F5DD7CA6C /* Pods-shibafoo-ios.debug.xcconfig */,
+				38B7032D03625FD78C606856 /* Pods-shibafoo-ios.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -252,12 +254,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2171D5E71A35EB260030CFA4 /* Build configuration list for PBXNativeTarget "shibafoo-ios" */;
 			buildPhases = (
-				9D9970D014B90B1D85372FDF /* Check Pods Manifest.lock */,
+				36FE7D8426F1B3BD08397219 /* [CP] Check Pods Manifest.lock */,
 				2171D5C41A35EB260030CFA4 /* Sources */,
 				2171D5C51A35EB260030CFA4 /* Frameworks */,
 				2171D5C61A35EB260030CFA4 /* Resources */,
-				71EF44928CFE3F28FACCAB98 /* Embed Pods Frameworks */,
-				9ECB3714C5204DE843509770 /* Copy Pods Resources */,
+				502DA3C164A547479E218F4D /* [CP] Embed Pods Frameworks */,
+				6686190912F74210608F7B23 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -293,16 +295,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "mo-fu";
 				TargetAttributes = {
 					2171D5C71A35EB260030CFA4 = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = R49F2456V7;
+						LastSwiftMigration = 0800;
 					};
 					2171D5DC1A35EB260030CFA4 = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = R49F2456V7;
+						LastSwiftMigration = 0800;
 						TestTargetID = 2171D5C71A35EB260030CFA4;
 					};
 				};
@@ -364,49 +368,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		71EF44928CFE3F28FACCAB98 /* Embed Pods Frameworks */ = {
+		36FE7D8426F1B3BD08397219 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		9D9970D014B90B1D85372FDF /* Check Pods Manifest.lock */ = {
+		502DA3C164A547479E218F4D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shibafoo-ios/Pods-shibafoo-ios-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9ECB3714C5204DE843509770 /* Copy Pods Resources */ = {
+		6686190912F74210608F7B23 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-shibafoo-ios/Pods-shibafoo-ios-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -483,8 +487,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -493,6 +499,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -528,8 +535,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: YUTA KUROTAKI (R49F2456V7)";
@@ -538,6 +547,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -548,6 +558,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "a52c5478-606f-4c82-80ff-bf8cb1253d34";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -555,34 +566,40 @@
 		};
 		2171D5E81A35EB260030CFA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C7387A3961F54987E7961CA /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 9604E575D1E3294F5DD7CA6C /* Pods-shibafoo-ios.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "shibafoo-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.mo-fu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "shibafoo-ios";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		2171D5E91A35EB260030CFA4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1CE47377E86EEC56891875CD /* Pods.release.xcconfig */;
+			baseConfigurationReference = 38B7032D03625FD78C606856 /* Pods-shibafoo-ios.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "shibafoo-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.mo-fu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "shibafoo-ios";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -603,6 +620,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.mo-fu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "shibafoo-ios";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/shibafoo-ios.app/shibafoo-ios";
 			};
 			name = Debug;
@@ -619,6 +637,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.mo-fu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "shibafoo-ios";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/shibafoo-ios.app/shibafoo-ios";
 			};
 			name = Release;
