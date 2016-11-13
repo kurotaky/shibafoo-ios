@@ -14,14 +14,11 @@ class ParsedPostCell: UITableViewCell {
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var loveButton: UIButton!
     
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        loveButton.imageView?.frame = CGRect(x: 0, y: 0, width: 10, height: 10)
-        loveButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
