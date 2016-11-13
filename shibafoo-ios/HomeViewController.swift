@@ -74,8 +74,7 @@ class HomeViewController: UITableViewController {
     }
     
     func reloadPosts() {
-        // Alamofire.request(.GET, "http://localhost:3000/api/posts").responseJSON { _, _, data, _ in
-        Alamofire.request("https://shibafoo-shibafoo.sqale.jp/api/posts.json").responseJSON { response in
+        Alamofire.request(EndpointConst().URL + "api/posts.json").responseJSON { response in
             self.parsedPosts.removeAll(keepingCapacity: true)
             if let posts = response.result.value {
                 for post in posts as! [AnyObject] {
