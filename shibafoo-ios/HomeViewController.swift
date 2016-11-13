@@ -47,7 +47,7 @@ class HomeViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomPostCell") as? ParsedPostCell
         let parsedPost = parsedPosts[(indexPath as NSIndexPath).row]
-        cell?.contentLabel.text = parsedPost.content
+        cell?.contentTextView.text = parsedPost.content
         cell?.createdAtLabel.text = parsedPost.createdAt
         cell?.nicknameLabel.text = parsedPost.nickname
         cell?.titleLabel.text = parsedPost.title
