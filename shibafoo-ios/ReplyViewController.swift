@@ -67,7 +67,7 @@ class ReplyViewController: UITableViewController {
         let userDefault = UserDefaults.standard
         let token = userDefault.object(forKey: "authentication_token") as? String
         let email = userDefault.object(forKey: "email") as? String
-        Alamofire.request("https://shibafoo-shibafoo.sqale.jp/api/posts/reply", parameters: ["email": email!, "token": token!])
+        Alamofire.request(EndpointConst().URL + "api/posts/reply", parameters: ["email": email!, "token": token!])
             .responseJSON { data in
               self.parsedReplyPosts.removeAll(keepingCapacity: true)
                 if let jsonData: DataResponse<Any> = data as DataResponse? {

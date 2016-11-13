@@ -18,7 +18,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -30,10 +29,12 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonDidPush(_ sender: UIButton) {
         let email = emailTextField.text
         let password = passwordTextField.text
-        let loginUrl = "https://shibafoo-shibafoo.sqale.jp/users/sign_in.json"
+        let loginUrl = EndpointConst().URL + "users/sign_in.json"
+        print(loginUrl)
         let params = ["user": ["email": email!, "password": password!] as AnyObject]
-        Alamofire.request(loginUrl, parameters: params)
+        Alamofire.request(loginUrl, method: .post, parameters: params)
             .responseJSON { response in
+                print(response.response?.statusCode)
                 if response.response?.statusCode == 201 {
                     if let json: AnyObject = response.result.value as AnyObject? {
                       let token = json["authentication_token"]

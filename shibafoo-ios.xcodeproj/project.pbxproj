@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		212112841B973BCD009C93C5 /* ParsedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212112831B973BCD009C93C5 /* ParsedPost.swift */; };
 		212112861B974476009C93C5 /* ParsedPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212112851B974476009C93C5 /* ParsedPostCell.swift */; };
+		212263A61DD837F800215800 /* EndpointConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212263A51DD837F800215800 /* EndpointConst.swift */; };
 		2171D5CE1A35EB260030CFA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2171D5CD1A35EB260030CFA4 /* AppDelegate.swift */; };
 		2171D5D31A35EB260030CFA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2171D5D11A35EB260030CFA4 /* Main.storyboard */; };
 		2171D5D51A35EB260030CFA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2171D5D41A35EB260030CFA4 /* Images.xcassets */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		212112831B973BCD009C93C5 /* ParsedPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedPost.swift; sourceTree = "<group>"; };
 		212112851B974476009C93C5 /* ParsedPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedPostCell.swift; sourceTree = "<group>"; };
+		212263A51DD837F800215800 /* EndpointConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointConst.swift; sourceTree = "<group>"; };
 		2171D5C81A35EB260030CFA4 /* shibafoo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "shibafoo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2171D5CC1A35EB260030CFA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2171D5CD1A35EB260030CFA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				2171D5E11A35EB260030CFA4 /* Supporting Files */,
 				2171D5D61A35EB260030CFA4 /* LaunchScreen.xib */,
 				2171D5CB1A35EB260030CFA4 /* Supporting Files */,
+				212263A51DD837F800215800 /* EndpointConst.swift */,
 			);
 			path = "shibafoo-ios";
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				2181DD171B9BF25C00383A7A /* PostViewController.swift in Sources */,
 				217D60E11B95E68200577081 /* MainTabViewController.swift in Sources */,
 				21EA0E5E1B9BC53A00ED2DE7 /* ParsedReplyPost.swift in Sources */,
+				212263A61DD837F800215800 /* EndpointConst.swift in Sources */,
 				217D60E31B95EC1800577081 /* LovedViewController.swift in Sources */,
 				217D60DB1B8FE70C00577081 /* LoginViewController.swift in Sources */,
 				212112861B974476009C93C5 /* ParsedPostCell.swift in Sources */,
@@ -515,6 +519,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PROVISIONING_PROFILE = "a52c5478-606f-4c82-80ff-bf8cb1253d34";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
