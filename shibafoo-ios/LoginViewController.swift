@@ -30,7 +30,6 @@ class LoginViewController: UIViewController {
         let email = emailTextField.text
         let password = passwordTextField.text
         let loginUrl = EndpointConst().URL + "users/sign_in.json"
-        print(loginUrl)
         let params = ["user": ["email": email!, "password": password!] as AnyObject]
         Alamofire.request(loginUrl, method: .post, parameters: params)
             .responseJSON { response in
