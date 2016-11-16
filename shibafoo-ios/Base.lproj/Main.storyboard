@@ -71,7 +71,7 @@
                                                 <constraint firstAttribute="width" constant="100" id="uMT-aT-64Q"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title=" Love" image="timeline_icon_love_off.png">
+                                            <state key="normal" title=" Love" image="timeline_icon_love_off-small.png">
                                                 <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
@@ -91,7 +91,7 @@
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="daN-5S-JVT"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title=" ReFoo!" image="timeline_icon_refoo.png">
+                                            <state key="normal" title=" ReFoo!" image="timeline_icon_refoo-small.png">
                                                 <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
@@ -141,7 +141,6 @@
                                     <outlet property="avatarImageView" destination="nK9-z1-Gtb" id="TpI-7o-Ipj"/>
                                     <outlet property="contentTextView" destination="dPR-9n-DfY" id="SUJ-aA-5pC"/>
                                     <outlet property="createdAtLabel" destination="KwW-Ma-kG8" id="Mhs-bx-Dra"/>
-                                    <outlet property="loveButton" destination="GaD-00-ToH" id="Cxx-wi-26H"/>
                                     <outlet property="nicknameLabel" destination="Py8-v3-RQg" id="HTo-9I-eH6"/>
                                     <outlet property="titleLabel" destination="IbT-um-oG0" id="veA-BQ-lfD"/>
                                 </connections>
@@ -339,7 +338,7 @@
         <scene sceneID="1AQ-km-L4O">
             <objects>
                 <navigationController id="JUe-mx-8z2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ホーム" image="footer_icon_home_on.png" id="n3c-8E-U9g"/>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="footer_icon_home_on-small.png" id="n3c-8E-U9g"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9b8-pS-Mpk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -359,7 +358,7 @@
         <scene sceneID="vBE-Te-LWd">
             <objects>
                 <navigationController id="RQH-EG-dqM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ReFoo!" image="footer_icon_refoo_off.png" id="M57-Es-7Xz"/>
+                    <tabBarItem key="tabBarItem" title="ReFoo!" image="footer_icon_refoo_off-small.png" id="M57-Es-7Xz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EbU-k5-Yo6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -396,7 +395,7 @@
                     <navigationItem key="navigationItem" id="h34-EJ-CZ9">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Biz-g7-oDF">
-                            <rect key="frame" x="62" y="7" width="240" height="30"/>
+                            <rect key="frame" x="68" y="7" width="240" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="みんなのログ"/>
@@ -404,7 +403,7 @@
                             </segments>
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </segmentedControl>
-                        <barButtonItem key="rightBarButtonItem" image="header_icon_foo.png" id="iWt-on-4y5">
+                        <barButtonItem key="rightBarButtonItem" image="header_icon_foo-small.png" id="iWt-on-4y5">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="Kix-Hn-Ac9" kind="presentation" id="7Xs-zh-XqB"/>
@@ -515,11 +514,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="footer_icon_home_on.png" width="44" height="40"/>
-        <image name="footer_icon_refoo_off.png" width="44" height="40"/>
-        <image name="header_icon_foo.png" width="40" height="43"/>
+        <image name="footer_icon_home_on-small.png" width="28" height="26"/>
+        <image name="footer_icon_refoo_off-small.png" width="28" height="25"/>
+        <image name="header_icon_foo-small.png" width="32" height="34"/>
         <image name="login_logo.png" width="318" height="248"/>
+        <image name="timeline_icon_love_off-small.png" width="14" height="13"/>
         <image name="timeline_icon_love_off.png" width="24" height="22"/>
+        <image name="timeline_icon_refoo-small.png" width="14" height="12"/>
         <image name="timeline_icon_refoo.png" width="26" height="22"/>
     </resources>
 </document>
