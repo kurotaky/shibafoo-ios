@@ -338,7 +338,7 @@
         <scene sceneID="1AQ-km-L4O">
             <objects>
                 <navigationController id="JUe-mx-8z2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ホーム" image="footer_icon_home_on.png" id="n3c-8E-U9g"/>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="footer_icon_home_on-small.png" id="n3c-8E-U9g"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9b8-pS-Mpk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -358,7 +358,7 @@
         <scene sceneID="vBE-Te-LWd">
             <objects>
                 <navigationController id="RQH-EG-dqM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ReFoo!" image="footer_icon_refoo_off.png" id="M57-Es-7Xz"/>
+                    <tabBarItem key="tabBarItem" title="ReFoo!" image="footer_icon_refoo_off-small.png" id="M57-Es-7Xz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EbU-k5-Yo6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -514,8 +514,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="footer_icon_home_on.png" width="44" height="40"/>
-        <image name="footer_icon_refoo_off.png" width="44" height="40"/>
+        <image name="footer_icon_home_on-small.png" width="28" height="26"/>
+        <image name="footer_icon_refoo_off-small.png" width="28" height="25"/>
         <image name="header_icon_foo-small.png" width="32" height="34"/>
         <image name="login_logo.png" width="318" height="248"/>
         <image name="timeline_icon_love_off-small.png" width="14" height="13"/>
