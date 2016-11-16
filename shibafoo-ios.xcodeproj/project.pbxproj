@@ -41,6 +41,8 @@
 		21EA0E601B9BC57500ED2DE7 /* ParsedReplyPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EA0E5F1B9BC57500ED2DE7 /* ParsedReplyPostCell.swift */; };
 		21EA0E621B9BCED300ED2DE7 /* header_icon_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E611B9BCED300ED2DE7 /* header_icon_menu.png */; };
 		21EA0E641B9BCF1700ED2DE7 /* header_icon_foo.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E631B9BCF1700ED2DE7 /* header_icon_foo.png */; };
+		21F741891DDC922500A71F13 /* timeline_icon_love_off-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 21F741881DDC922500A71F13 /* timeline_icon_love_off-small.png */; };
+		21F7418B1DDC922C00A71F13 /* timeline_icon_refoo-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 21F7418A1DDC922C00A71F13 /* timeline_icon_refoo-small.png */; };
 		21FCF5B91B8DDF6D00E2F249 /* shibafoo-launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FCF5B81B8DDF6D00E2F249 /* shibafoo-launch.png */; };
 		B3A34B69F237DEABB8B60A4E /* Pods_shibafoo_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1F284366E773CFBCFE3570 /* Pods_shibafoo_ios.framework */; };
 /* End PBXBuildFile section */
@@ -94,6 +96,8 @@
 		21EA0E5F1B9BC57500ED2DE7 /* ParsedReplyPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedReplyPostCell.swift; sourceTree = "<group>"; };
 		21EA0E611B9BCED300ED2DE7 /* header_icon_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_icon_menu.png; sourceTree = "<group>"; };
 		21EA0E631B9BCF1700ED2DE7 /* header_icon_foo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_icon_foo.png; sourceTree = "<group>"; };
+		21F741881DDC922500A71F13 /* timeline_icon_love_off-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timeline_icon_love_off-small.png"; sourceTree = "<group>"; };
+		21F7418A1DDC922C00A71F13 /* timeline_icon_refoo-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timeline_icon_refoo-small.png"; sourceTree = "<group>"; };
 		21FCF5B81B8DDF6D00E2F249 /* shibafoo-launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shibafoo-launch.png"; sourceTree = "<group>"; };
 		38B7032D03625FD78C606856 /* Pods-shibafoo-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shibafoo-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-shibafoo-ios/Pods-shibafoo-ios.release.xcconfig"; sourceTree = "<group>"; };
 		6B1F284366E773CFBCFE3570 /* Pods_shibafoo_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shibafoo_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,8 +212,10 @@
 				21EA0E431B9B35A400ED2DE7 /* shibafoo-logo1.pdf */,
 				21EA0E451B9B7ADE00ED2DE7 /* login_logo.png */,
 				21EA0E471B9B7BB800ED2DE7 /* timeline_icon_refoo.png */,
+				21F7418A1DDC922C00A71F13 /* timeline_icon_refoo-small.png */,
 				21EA0E481B9B7BB800ED2DE7 /* timeline_icon_love_on.png */,
 				21EA0E491B9B7BB800ED2DE7 /* timeline_icon_love_off.png */,
+				21F741881DDC922500A71F13 /* timeline_icon_love_off-small.png */,
 				21EA0E4D1B9BC12700ED2DE7 /* footer_icon_home_off.png */,
 				21EA0E4E1B9BC12700ED2DE7 /* footer_icon_home_on.png */,
 				21EA0E4F1B9BC12700ED2DE7 /* footer_icon_love_off.png */,
@@ -338,8 +344,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21F741891DDC922500A71F13 /* timeline_icon_love_off-small.png in Resources */,
 				21EA0E441B9B35A400ED2DE7 /* shibafoo-logo1.pdf in Resources */,
 				21EA0E461B9B7ADE00ED2DE7 /* login_logo.png in Resources */,
+				21F7418B1DDC922C00A71F13 /* timeline_icon_refoo-small.png in Resources */,
 				21EA0E5B1B9BC12700ED2DE7 /* footer_icon_refoo_off.png in Resources */,
 				2171D5D31A35EB260030CFA4 /* Main.storyboard in Resources */,
 				21EA0E4A1B9B7BB800ED2DE7 /* timeline_icon_refoo.png in Resources */,

@@ -71,7 +71,7 @@
                                                 <constraint firstAttribute="width" constant="100" id="uMT-aT-64Q"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title=" Love" image="timeline_icon_love_off.png">
+                                            <state key="normal" title=" Love" image="timeline_icon_love_off-small.png">
                                                 <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
@@ -91,7 +91,7 @@
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="daN-5S-JVT"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title=" ReFoo!" image="timeline_icon_refoo.png">
+                                            <state key="normal" title=" ReFoo!" image="timeline_icon_refoo-small.png">
                                                 <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
@@ -141,7 +141,6 @@
                                     <outlet property="avatarImageView" destination="nK9-z1-Gtb" id="TpI-7o-Ipj"/>
                                     <outlet property="contentTextView" destination="dPR-9n-DfY" id="SUJ-aA-5pC"/>
                                     <outlet property="createdAtLabel" destination="KwW-Ma-kG8" id="Mhs-bx-Dra"/>
-                                    <outlet property="loveButton" destination="GaD-00-ToH" id="Cxx-wi-26H"/>
                                     <outlet property="nicknameLabel" destination="Py8-v3-RQg" id="HTo-9I-eH6"/>
                                     <outlet property="titleLabel" destination="IbT-um-oG0" id="veA-BQ-lfD"/>
                                 </connections>
@@ -519,7 +518,9 @@
         <image name="footer_icon_refoo_off.png" width="44" height="40"/>
         <image name="header_icon_foo.png" width="40" height="43"/>
         <image name="login_logo.png" width="318" height="248"/>
+        <image name="timeline_icon_love_off-small.png" width="14" height="13"/>
         <image name="timeline_icon_love_off.png" width="24" height="22"/>
+        <image name="timeline_icon_refoo-small.png" width="14" height="12"/>
         <image name="timeline_icon_refoo.png" width="26" height="22"/>
     </resources>
 </document>
