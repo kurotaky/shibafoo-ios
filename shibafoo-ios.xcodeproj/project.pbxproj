@@ -43,6 +43,7 @@
 		21EA0E641B9BCF1700ED2DE7 /* header_icon_foo.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E631B9BCF1700ED2DE7 /* header_icon_foo.png */; };
 		21F741891DDC922500A71F13 /* timeline_icon_love_off-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 21F741881DDC922500A71F13 /* timeline_icon_love_off-small.png */; };
 		21F7418B1DDC922C00A71F13 /* timeline_icon_refoo-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 21F7418A1DDC922C00A71F13 /* timeline_icon_refoo-small.png */; };
+		21F7418D1DDC93EF00A71F13 /* header_icon_foo-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 21F7418C1DDC93EF00A71F13 /* header_icon_foo-small.png */; };
 		21FCF5B91B8DDF6D00E2F249 /* shibafoo-launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FCF5B81B8DDF6D00E2F249 /* shibafoo-launch.png */; };
 		B3A34B69F237DEABB8B60A4E /* Pods_shibafoo_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1F284366E773CFBCFE3570 /* Pods_shibafoo_ios.framework */; };
 /* End PBXBuildFile section */
@@ -98,6 +99,7 @@
 		21EA0E631B9BCF1700ED2DE7 /* header_icon_foo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_icon_foo.png; sourceTree = "<group>"; };
 		21F741881DDC922500A71F13 /* timeline_icon_love_off-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timeline_icon_love_off-small.png"; sourceTree = "<group>"; };
 		21F7418A1DDC922C00A71F13 /* timeline_icon_refoo-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timeline_icon_refoo-small.png"; sourceTree = "<group>"; };
+		21F7418C1DDC93EF00A71F13 /* header_icon_foo-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "header_icon_foo-small.png"; sourceTree = "<group>"; };
 		21FCF5B81B8DDF6D00E2F249 /* shibafoo-launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shibafoo-launch.png"; sourceTree = "<group>"; };
 		38B7032D03625FD78C606856 /* Pods-shibafoo-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shibafoo-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-shibafoo-ios/Pods-shibafoo-ios.release.xcconfig"; sourceTree = "<group>"; };
 		6B1F284366E773CFBCFE3570 /* Pods_shibafoo_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shibafoo_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +209,7 @@
 			children = (
 				21EA0E611B9BCED300ED2DE7 /* header_icon_menu.png */,
 				21EA0E631B9BCF1700ED2DE7 /* header_icon_foo.png */,
+				21F7418C1DDC93EF00A71F13 /* header_icon_foo-small.png */,
 				21FCF5B81B8DDF6D00E2F249 /* shibafoo-launch.png */,
 				21EA0E3D1B9AB51F00ED2DE7 /* test-logo.jpeg */,
 				21EA0E431B9B35A400ED2DE7 /* shibafoo-logo1.pdf */,
@@ -345,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21F741891DDC922500A71F13 /* timeline_icon_love_off-small.png in Resources */,
+				21F7418D1DDC93EF00A71F13 /* header_icon_foo-small.png in Resources */,
 				21EA0E441B9B35A400ED2DE7 /* shibafoo-logo1.pdf in Resources */,
 				21EA0E461B9B7ADE00ED2DE7 /* login_logo.png in Resources */,
 				21F7418B1DDC922C00A71F13 /* timeline_icon_refoo-small.png in Resources */,

@@ -395,7 +395,7 @@
                     <navigationItem key="navigationItem" id="h34-EJ-CZ9">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Biz-g7-oDF">
-                            <rect key="frame" x="62" y="7" width="240" height="30"/>
+                            <rect key="frame" x="68" y="7" width="240" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="みんなのログ"/>
@@ -403,7 +403,7 @@
                             </segments>
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </segmentedControl>
-                        <barButtonItem key="rightBarButtonItem" image="header_icon_foo.png" id="iWt-on-4y5">
+                        <barButtonItem key="rightBarButtonItem" image="header_icon_foo-small.png" id="iWt-on-4y5">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="Kix-Hn-Ac9" kind="presentation" id="7Xs-zh-XqB"/>
@@ -516,7 +516,7 @@
     <resources>
         <image name="footer_icon_home_on.png" width="44" height="40"/>
         <image name="footer_icon_refoo_off.png" width="44" height="40"/>
-        <image name="header_icon_foo.png" width="40" height="43"/>
+        <image name="header_icon_foo-small.png" width="32" height="34"/>
         <image name="login_logo.png" width="318" height="248"/>
         <image name="timeline_icon_love_off-small.png" width="14" height="13"/>
         <image name="timeline_icon_love_off.png" width="24" height="22"/>
