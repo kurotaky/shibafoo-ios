@@ -88,7 +88,6 @@ class HomeViewController: UITableViewController {
                     outputDateFormatter.dateFormat = "yyy/MM/dd HH:mm"
                     parsedPost.createdAt = outputDateFormatter.string(from: date!)
                     if let avatarUrl = post["avatar_url"] as? String {
-//                        parsedPost.avatarURL = NSURL(string: avatarUrl)
                         parsedPost.avatarURL = URL(string: avatarUrl)
                     }
                     parsedPost.nickname = post["nickname"] as? String

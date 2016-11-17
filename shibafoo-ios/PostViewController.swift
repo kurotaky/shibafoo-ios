@@ -13,6 +13,7 @@ import SwiftyJSON
 class PostViewController: UIViewController {
 
     @IBOutlet weak var postTextField: UITextView!
+
     @IBAction func postDidPush(_ sender: UIButton) {
         let content = postTextField.text
         let postUrl = EndpointConst().URL + "api/posts"
@@ -22,9 +23,9 @@ class PostViewController: UIViewController {
         let params = ["content": content!, "email": email!, "token": token!]
         Alamofire.request(postUrl, method: .post, parameters: params)
             .responseJSON { response in
-                if (response.result.value != nil) {
-                    // unwind segue
+                if (response.response?.statusCode == 200) {
                     print("Success!")
+                    self.dismiss(animated: true, completion: nil)
                 } else {
                     print("Error: \(response.data)")
                 }
