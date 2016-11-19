@@ -14,6 +14,7 @@ class ParsedPostCell: UITableViewCell {
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var lovesCount: UIButton!
     
 
     override func awakeFromNib() {

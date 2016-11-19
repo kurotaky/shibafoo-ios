@@ -13,15 +13,16 @@ class ParsedPost: NSObject {
     var nickname: String?
     var title: String?
     var avatarURL: URL?
-    // ラブされた数
+    var lovesCount: Int?
     // リプライ数
     var createdAt: String?
     
-    init(content: String?, createdAt: String?, avatarURL: URL?, nickname: String?, title: String) {
+    init(content: String?, createdAt: String?, avatarURL: URL?, nickname: String?, title: String, lovesCount: Int?) {
         super.init()
         self.content = content
         self.nickname = nickname
         self.title = title
+        self.lovesCount = lovesCount
         self.createdAt = createdAt
         self.avatarURL = avatarURL
     }
@@ -31,6 +32,7 @@ class ParsedPost: NSObject {
         self.content = ""
         self.nickname = ""
         self.title = ""
+        self.lovesCount = 0
         self.createdAt = ""
         self.avatarURL = nil
     }

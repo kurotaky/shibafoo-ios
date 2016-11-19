@@ -17,7 +17,7 @@ class HomeViewController: UITableViewController {
     var parsedPosts : Array <ParsedPost> = []
     
     @IBAction func handleRefresh(_ sender: AnyObject?) {
-        self.parsedPosts.append(ParsedPost(content: "New row", createdAt: Date().description, avatarURL: defaultAvatarURL, nickname: "new", title: "title"))
+        self.parsedPosts.append(ParsedPost(content: "New row", createdAt: Date().description, avatarURL: defaultAvatarURL, nickname: "new", title: "title", lovesCount: 0))
         reloadPosts()
         refreshControl!.endRefreshing()
     }
@@ -51,6 +51,9 @@ class HomeViewController: UITableViewController {
         cell?.createdAtLabel.text = parsedPost.createdAt
         cell?.nicknameLabel.text = parsedPost.nickname
         cell?.titleLabel.text = parsedPost.title
+        let lovesCountText = (parsedPost.lovesCount?.description)! + " Love"
+        cell?.lovesCount.setTitle(lovesCountText, for: UIControlState.normal)
+
         if parsedPost.avatarURL != nil {
             var optData:Data? = nil
             do {
@@ -92,15 +95,31 @@ class HomeViewController: UITableViewController {
                     }
                     parsedPost.nickname = post["nickname"] as? String
                     parsedPost.title = post["title"] as? String
+                    parsedPost.lovesCount = post["loves_count"] as? Int
                     self.parsedPosts.append(parsedPost)
                 }
                 DispatchQueue.main.async(execute: { ()-> Void in self.tableView.reloadData() })
             }
         }
     }
-    
+
     @IBAction func loveButtonDidPush(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected;
+        var lovesCount = 0
+        let button = sender
+        let view = button.superview!
+        let cell = view.superview as! ParsedPostCell
+        let indexPath = self.tableView.indexPath(for: cell)
+        let parsedPost = self.parsedPosts[(indexPath?.row)!]
+        lovesCount = parsedPost.lovesCount!
+        if sender.isSelected {
+            sender.isSelected = !sender.isSelected
+            lovesCount = lovesCount - 1
+        } else {
+            sender.isSelected = !sender.isSelected
+            lovesCount = lovesCount + 1
+        }
+        let loveText = String(lovesCount) + " Love"
+        sender.setTitle(loveText, for: UIControlState.selected)
     }
     
     /*
