@@ -15,7 +15,7 @@ let defaultAvatarURL = URL(string: "https://shibafoo.s3.amazonaws.com/uploads/us
 class HomeViewController: UITableViewController {
 
     var parsedPosts : Array <ParsedPost> = []
-
+    
     @IBAction func handleRefresh(_ sender: AnyObject?) {
         self.parsedPosts.append(ParsedPost(content: "New row", createdAt: Date().description, avatarURL: defaultAvatarURL, nickname: "new", title: "title"))
         reloadPosts()
@@ -98,6 +98,11 @@ class HomeViewController: UITableViewController {
             }
         }
     }
+    
+    @IBAction func loveButtonDidPush(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected;
+    }
+    
     /*
     // MARK: - Navigation
 
