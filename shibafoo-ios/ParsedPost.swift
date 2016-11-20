@@ -9,6 +9,7 @@
 import UIKit
 
 class ParsedPost: NSObject {
+    var id: Int?
     var content: String?
     var nickname: String?
     var title: String?
@@ -18,8 +19,9 @@ class ParsedPost: NSObject {
     // リプライ数
     var createdAt: String?
     
-    init(content: String?, createdAt: String?, avatarURL: URL?, nickname: String?, title: String, lovesCount: Int?, isLoved: String?) {
+    init(id: Int?, content: String?, createdAt: String?, avatarURL: URL?, nickname: String?, title: String, lovesCount: Int?, isLoved: String?) {
         super.init()
+        self.id = id
         self.content = content
         self.nickname = nickname
         self.title = title
@@ -31,6 +33,7 @@ class ParsedPost: NSObject {
     
     override init() {
         super.init()
+        self.id = 1
         self.content = ""
         self.nickname = ""
         self.title = ""

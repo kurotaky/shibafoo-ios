@@ -17,7 +17,7 @@ class HomeViewController: UITableViewController {
     var parsedPosts : Array <ParsedPost> = []
     
     @IBAction func handleRefresh(_ sender: AnyObject?) {
-        self.parsedPosts.append(ParsedPost(content: "New row", createdAt: Date().description, avatarURL: defaultAvatarURL, nickname: "new", title: "title", lovesCount: 0, isLoved: "false"))
+        self.parsedPosts.append(ParsedPost(id: 1, content: "New row", createdAt: Date().description, avatarURL: defaultAvatarURL, nickname: "new", title: "title", lovesCount: 0, isLoved: "false"))
         reloadPosts()
         refreshControl!.endRefreshing()
     }
@@ -108,6 +108,7 @@ class HomeViewController: UITableViewController {
                     parsedPost.title = post["title"] as? String
                     parsedPost.lovesCount = post["loves_count"] as? Int
                     parsedPost.isLoved = post["is_loved"] as? String
+                    parsedPost.id = post["id"] as? Int
                     self.parsedPosts.append(parsedPost)
                 }
                 DispatchQueue.main.async(execute: { ()-> Void in self.tableView.reloadData() })
@@ -123,10 +124,28 @@ class HomeViewController: UITableViewController {
         let indexPath = self.tableView.indexPath(for: cell)
         let parsedPost = self.parsedPosts[(indexPath?.row)!]
         lovesCount = parsedPost.lovesCount!
+        
+        let userDefault = UserDefaults.standard
+        let email = userDefault.object(forKey: "email") as? String
+        let token = userDefault.object(forKey: "authentication_token")
+
+        let params = ["email": email!, "token": token!, "post_id": parsedPost.id!]
         if sender.isSelected {
+            Alamofire.request(EndpointConst().URL + "api/loves/unlove", method: .delete, parameters: params)
+                .responseJSON { response in
+                    if response.response?.statusCode == 201 {
+                        print("delete success!!!")
+                    }
+            }
             sender.isSelected = !sender.isSelected
             lovesCount = lovesCount - 1
         } else {
+            Alamofire.request(EndpointConst().URL + "api/loves", method: .post, parameters: params)
+                .responseJSON { response in
+                    if response.response?.statusCode == 201 {
+                        print("success!!!")
+                    }
+            }
             sender.isSelected = !sender.isSelected
             lovesCount = lovesCount + 1
         }
