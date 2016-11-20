@@ -17,7 +17,7 @@ class HomeViewController: UITableViewController {
     var parsedPosts : Array <ParsedPost> = []
     
     @IBAction func handleRefresh(_ sender: AnyObject?) {
-        self.parsedPosts.append(ParsedPost(content: "New row", createdAt: Date().description, avatarURL: defaultAvatarURL, nickname: "new", title: "title", lovesCount: 0))
+        self.parsedPosts.append(ParsedPost(content: "New row", createdAt: Date().description, avatarURL: defaultAvatarURL, nickname: "new", title: "title", lovesCount: 0, isLoved: "false"))
         reloadPosts()
         refreshControl!.endRefreshing()
     }
@@ -52,7 +52,14 @@ class HomeViewController: UITableViewController {
         cell?.nicknameLabel.text = parsedPost.nickname
         cell?.titleLabel.text = parsedPost.title
         let lovesCountText = (parsedPost.lovesCount?.description)! + " Love"
-        cell?.lovesCount.setTitle(lovesCountText, for: UIControlState.normal)
+        var lovedState: UIControlState = UIControlState.normal
+        if (parsedPost.isLoved != nil) {
+            if parsedPost.isLoved == "true" {
+                cell?.lovesCount.isSelected = true
+                lovedState = UIControlState.selected
+            }
+        }
+        cell?.lovesCount.setTitle(lovesCountText, for: lovedState)
 
         if parsedPost.avatarURL != nil {
             var optData:Data? = nil
@@ -75,9 +82,13 @@ class HomeViewController: UITableViewController {
         }
         return cell!
     }
-    
+
     func reloadPosts() {
-        Alamofire.request(EndpointConst().URL + "api/posts.json").responseJSON { response in
+        let userDefault = UserDefaults.standard
+        let email = userDefault.object(forKey: "email") as? String
+        let token = userDefault.object(forKey: "authentication_token")
+        let parameters: Parameters = ["email": email!, "token": token!]
+        Alamofire.request(EndpointConst().URL + "api/posts.json", parameters: parameters).responseJSON { response in
             self.parsedPosts.removeAll(keepingCapacity: true)
             if let posts = response.result.value {
                 for post in posts as! [AnyObject] {
@@ -96,6 +107,7 @@ class HomeViewController: UITableViewController {
                     parsedPost.nickname = post["nickname"] as? String
                     parsedPost.title = post["title"] as? String
                     parsedPost.lovesCount = post["loves_count"] as? Int
+                    parsedPost.isLoved = post["is_loved"] as? String
                     self.parsedPosts.append(parsedPost)
                 }
                 DispatchQueue.main.async(execute: { ()-> Void in self.tableView.reloadData() })
