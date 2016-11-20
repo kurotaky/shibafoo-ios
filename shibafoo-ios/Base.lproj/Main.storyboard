@@ -71,9 +71,12 @@
                                                 <constraint firstAttribute="width" constant="100" id="uMT-aT-64Q"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title=" Love" image="timeline_icon_love_off-small.png">
+                                            <state key="normal" title="0 Love" image="timeline_icon_love_off-small.png">
                                                 <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <state key="selected" title="0 Love" image="timeline_icon_love_on-small.png">
+                                                <color key="titleColor" red="1" green="0.0" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -81,6 +84,9 @@
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="loveButtonDidPush:" destination="bLp-6I-jV3" eventType="touchUpInside" id="vGw-BJ-DBf"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dq1-Ej-ji5">
                                             <rect key="frame" x="170" y="113" width="100" height="22"/>
@@ -91,7 +97,7 @@
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="daN-5S-JVT"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title=" ReFoo!" image="timeline_icon_refoo-small.png">
+                                            <state key="normal" title=" ReFoo! 0 件" image="timeline_icon_refoo-small.png">
                                                 <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
@@ -141,6 +147,7 @@
                                     <outlet property="avatarImageView" destination="nK9-z1-Gtb" id="TpI-7o-Ipj"/>
                                     <outlet property="contentTextView" destination="dPR-9n-DfY" id="SUJ-aA-5pC"/>
                                     <outlet property="createdAtLabel" destination="KwW-Ma-kG8" id="Mhs-bx-Dra"/>
+                                    <outlet property="lovesCount" destination="GaD-00-ToH" id="Acp-pq-W3b"/>
                                     <outlet property="nicknameLabel" destination="Py8-v3-RQg" id="HTo-9I-eH6"/>
                                     <outlet property="titleLabel" destination="IbT-um-oG0" id="veA-BQ-lfD"/>
                                 </connections>
@@ -520,6 +527,7 @@
         <image name="login_logo.png" width="318" height="248"/>
         <image name="timeline_icon_love_off-small.png" width="14" height="13"/>
         <image name="timeline_icon_love_off.png" width="24" height="22"/>
+        <image name="timeline_icon_love_on-small.png" width="14" height="13"/>
         <image name="timeline_icon_refoo-small.png" width="14" height="12"/>
         <image name="timeline_icon_refoo.png" width="26" height="22"/>
     </resources>

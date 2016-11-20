@@ -15,9 +15,9 @@ let defaultAvatarURL = URL(string: "https://shibafoo.s3.amazonaws.com/uploads/us
 class HomeViewController: UITableViewController {
 
     var parsedPosts : Array <ParsedPost> = []
-
+    
     @IBAction func handleRefresh(_ sender: AnyObject?) {
-        self.parsedPosts.append(ParsedPost(content: "New row", createdAt: Date().description, avatarURL: defaultAvatarURL, nickname: "new", title: "title"))
+        self.parsedPosts.append(ParsedPost(id: 1, content: "New row", createdAt: Date().description, avatarURL: defaultAvatarURL, nickname: "new", title: "title", lovesCount: 0, isLoved: "false"))
         reloadPosts()
         refreshControl!.endRefreshing()
     }
@@ -51,6 +51,19 @@ class HomeViewController: UITableViewController {
         cell?.createdAtLabel.text = parsedPost.createdAt
         cell?.nicknameLabel.text = parsedPost.nickname
         cell?.titleLabel.text = parsedPost.title
+        let lovesCountText = (parsedPost.lovesCount?.description)! + " Love"
+        var lovedState: UIControlState = UIControlState.normal
+        if (parsedPost.isLoved != nil) {
+            if parsedPost.isLoved == "true" {
+                cell?.lovesCount.isSelected = true
+                lovedState = UIControlState.selected
+            } else {
+                cell?.lovesCount.isSelected = false
+                lovedState = UIControlState.normal
+            }
+        }
+        cell?.lovesCount.setTitle(lovesCountText, for: lovedState)
+
         if parsedPost.avatarURL != nil {
             var optData:Data? = nil
             do {
@@ -72,9 +85,13 @@ class HomeViewController: UITableViewController {
         }
         return cell!
     }
-    
+
     func reloadPosts() {
-        Alamofire.request(EndpointConst().URL + "api/posts.json").responseJSON { response in
+        let userDefault = UserDefaults.standard
+        let email = userDefault.object(forKey: "email") as? String
+        let token = userDefault.object(forKey: "authentication_token")
+        let parameters: Parameters = ["email": email!, "token": token!]
+        Alamofire.request(EndpointConst().URL + "api/posts.json", parameters: parameters).responseJSON { response in
             self.parsedPosts.removeAll(keepingCapacity: true)
             if let posts = response.result.value {
                 for post in posts as! [AnyObject] {
@@ -92,12 +109,56 @@ class HomeViewController: UITableViewController {
                     }
                     parsedPost.nickname = post["nickname"] as? String
                     parsedPost.title = post["title"] as? String
+                    parsedPost.lovesCount = post["loves_count"] as? Int
+                    parsedPost.isLoved = post["is_loved"] as? String
+                    parsedPost.id = post["id"] as? Int
                     self.parsedPosts.append(parsedPost)
                 }
                 DispatchQueue.main.async(execute: { ()-> Void in self.tableView.reloadData() })
             }
         }
     }
+
+    @IBAction func loveButtonDidPush(_ sender: UIButton) {
+        let button = sender
+        let view = button.superview!
+        let cell = view.superview as! ParsedPostCell
+        let indexPath = self.tableView.indexPath(for: cell)
+        let parsedPost = self.parsedPosts[(indexPath?.row)!]
+        var lovesCount = parsedPost.lovesCount!
+        
+        let userDefault = UserDefaults.standard
+        let email = userDefault.object(forKey: "email") as? String
+        let token = userDefault.object(forKey: "authentication_token")
+        let params = ["email": email!, "token": token!, "post_id": parsedPost.id!]
+
+        if sender.isSelected {
+            Alamofire.request(EndpointConst().URL + "api/loves/unlove", method: .delete, parameters: params)
+                .responseJSON { response in
+                    if response.response?.statusCode == 200 {
+                        if let data = response.result.value as? NSDictionary {
+                            lovesCount = (data["loves_count"] as? Int)!
+                            sender.isSelected = !sender.isSelected
+                            let loveText = String(lovesCount) + " Love"
+                            sender.setTitle(loveText, for: UIControlState.normal)
+                        }
+                    }
+            }
+        } else {
+            Alamofire.request(EndpointConst().URL + "api/loves", method: .post, parameters: params)
+                .responseJSON { response in
+                    if response.response?.statusCode == 200 {
+                        if let data = response.result.value as? NSDictionary {
+                            lovesCount = (data["loves_count"] as? Int)!
+                            sender.isSelected = !sender.isSelected
+                            let loveText = String(lovesCount) + " Love"
+                            sender.setTitle(loveText, for: UIControlState.selected)
+                        }
+                    }
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
