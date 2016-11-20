@@ -57,6 +57,9 @@ class HomeViewController: UITableViewController {
             if parsedPost.isLoved == "true" {
                 cell?.lovesCount.isSelected = true
                 lovedState = UIControlState.selected
+            } else {
+                cell?.lovesCount.isSelected = false
+                lovedState = UIControlState.normal
             }
         }
         cell?.lovesCount.setTitle(lovesCountText, for: lovedState)
@@ -117,40 +120,43 @@ class HomeViewController: UITableViewController {
     }
 
     @IBAction func loveButtonDidPush(_ sender: UIButton) {
-        var lovesCount = 0
         let button = sender
         let view = button.superview!
         let cell = view.superview as! ParsedPostCell
         let indexPath = self.tableView.indexPath(for: cell)
         let parsedPost = self.parsedPosts[(indexPath?.row)!]
-        lovesCount = parsedPost.lovesCount!
+        var lovesCount = parsedPost.lovesCount!
         
         let userDefault = UserDefaults.standard
         let email = userDefault.object(forKey: "email") as? String
         let token = userDefault.object(forKey: "authentication_token")
-
         let params = ["email": email!, "token": token!, "post_id": parsedPost.id!]
+
         if sender.isSelected {
             Alamofire.request(EndpointConst().URL + "api/loves/unlove", method: .delete, parameters: params)
                 .responseJSON { response in
-                    if response.response?.statusCode == 201 {
-                        print("delete success!!!")
+                    if response.response?.statusCode == 200 {
+                        if let data = response.result.value as? NSDictionary {
+                            lovesCount = (data["loves_count"] as? Int)!
+                            sender.isSelected = !sender.isSelected
+                            let loveText = String(lovesCount) + " Love"
+                            sender.setTitle(loveText, for: UIControlState.normal)
+                        }
                     }
             }
-            sender.isSelected = !sender.isSelected
-            lovesCount = lovesCount - 1
         } else {
             Alamofire.request(EndpointConst().URL + "api/loves", method: .post, parameters: params)
                 .responseJSON { response in
-                    if response.response?.statusCode == 201 {
-                        print("success!!!")
+                    if response.response?.statusCode == 200 {
+                        if let data = response.result.value as? NSDictionary {
+                            lovesCount = (data["loves_count"] as? Int)!
+                            sender.isSelected = !sender.isSelected
+                            let loveText = String(lovesCount) + " Love"
+                            sender.setTitle(loveText, for: UIControlState.selected)
+                        }
                     }
             }
-            sender.isSelected = !sender.isSelected
-            lovesCount = lovesCount + 1
         }
-        let loveText = String(lovesCount) + " Love"
-        sender.setTitle(loveText, for: UIControlState.selected)
     }
     
     /*
