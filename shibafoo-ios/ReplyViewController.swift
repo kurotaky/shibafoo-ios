@@ -50,7 +50,7 @@ class ReplyViewController: UITableViewController {
         cell?.nicknameLabel.text = parsedReplyPost.nickname
         cell?.titleLabel.text = parsedReplyPost.title
         if parsedReplyPost.avatarURL != nil {
-            DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async(execute: {() -> Void in
+            DispatchQueue.global().async(execute: {() -> Void in
                     let avatarImage = UIImage(data: try! Data (
                         contentsOf: parsedReplyPost.avatarURL! as URL))
                     DispatchQueue.main.async(execute: {

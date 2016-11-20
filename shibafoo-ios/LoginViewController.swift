@@ -33,7 +33,6 @@ class LoginViewController: UIViewController {
         let params = ["user": ["email": email!, "password": password!] as AnyObject]
         Alamofire.request(loginUrl, method: .post, parameters: params)
             .responseJSON { response in
-                print(response.response?.statusCode)
                 if response.response?.statusCode == 201 {
                     if let json: AnyObject = response.result.value as AnyObject? {
                       let token = json["authentication_token"]
@@ -46,7 +45,6 @@ class LoginViewController: UIViewController {
                     }
                 } else {
                     // アラート、APIのerror messageを表示
-                    print(response.result.value)
                     if let json: AnyObject = response.result.value as AnyObject? {
                       let errorMessage = json["error"] as? String
                       let alertController = UIAlertController(title: "エラー", message: errorMessage, preferredStyle: UIAlertControllerStyle.alert)
