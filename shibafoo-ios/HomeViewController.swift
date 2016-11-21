@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Kingfisher
 
 let defaultAvatarURL = URL(string: "https://shibafoo.s3.amazonaws.com/uploads/user_profile/avatar/1/45eb7049-93d5-4d6f-84da-dd233cbfb06a.jpg")
 
@@ -66,27 +67,15 @@ class HomeViewController: UITableViewController {
             }
         }
         cell?.lovesCount.setTitle(lovesCountText, for: lovedState)
-
         if parsedPost.avatarURL != nil {
-            var optData:Data? = nil
-            do {
-                optData = try Data(contentsOf: parsedPost.avatarURL! as URL, options: NSData.ReadingOptions.mappedIfSafe)
-            }
-            catch {
-                print("Handle \(error) here")
-            }
-            if let data = optData {
-                DispatchQueue.global().async(execute: {() -> Void in
-                        let avatarImage = UIImage(data: data)
-                        DispatchQueue.main.async(execute: {
-                                cell?.avatarImageView.image = avatarImage
-                        })
-                    }
-                )
-                cell?.avatarImageView.image = UIImage(data: data)
-            }
+            let url = URL(string: parsedPost.avatarURL!.description)
+            cell?.avatarImageView.kf.setImage(with: url)
         }
         return cell!
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140.0
     }
     
     func reloadPosts() {
