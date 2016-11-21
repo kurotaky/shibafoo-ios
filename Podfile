@@ -6,4 +6,5 @@ use_frameworks!
 target 'shibafoo-ios' do
   pod 'Alamofire', '~> 4.0'
   pod 'SwiftyJSON'
+  pod 'Kingfisher'
 end
