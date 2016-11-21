@@ -9,11 +9,13 @@
 import UIKit
 
 class ParsedReplyPostCell: UITableViewCell {
-    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var createdAtLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var lovesCount: UIButton!
+    @IBOutlet weak var replyUserNicknameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
