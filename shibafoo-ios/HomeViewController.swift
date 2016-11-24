@@ -84,7 +84,7 @@ class HomeViewController: UITableViewController {
         if let token = userDefault.object(forKey: "authentication_token") as? String {
             if let email = userDefault.object(forKey: "email") as? String {
                 let parameters: Parameters = ["email": email, "token": token]
-                Alamofire.request(EndpointConst().URL + "api/posts.json", parameters: parameters).responseJSON { response in
+                Alamofire.request(EndpointConst().URL + "api/posts/friend", parameters: parameters).responseJSON { response in
                     self.parsedPosts.removeAll(keepingCapacity: true)
                     if let posts = response.result.value {
                         for post in posts as! [AnyObject] {
