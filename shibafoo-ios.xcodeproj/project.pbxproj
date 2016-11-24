@@ -19,11 +19,11 @@
 		217D60DD1B95E61500577081 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D60DC1B95E61500577081 /* HomeViewController.swift */; };
 		217D60DF1B95E63E00577081 /* ReplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D60DE1B95E63E00577081 /* ReplyViewController.swift */; };
 		217D60E11B95E68200577081 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D60E01B95E68200577081 /* MainTabViewController.swift */; };
-		217D60E31B95EC1800577081 /* LovedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D60E21B95EC1800577081 /* LovedViewController.swift */; };
-		217D60E51B95EC9200577081 /* MyPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217D60E41B95EC9200577081 /* MyPostViewController.swift */; };
 		2181DD171B9BF25C00383A7A /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2181DD161B9BF25C00383A7A /* PostViewController.swift */; };
 		21CFD2D11DE71C3C007E089D /* LoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CFD2D01DE71C3C007E089D /* LoveViewController.swift */; };
 		21CFD2D31DE71D0D007E089D /* LovePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CFD2D21DE71D0D007E089D /* LovePostCell.swift */; };
+		21CFD2D61DE726E4007E089D /* MyFooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CFD2D51DE726E4007E089D /* MyFooViewController.swift */; };
+		21CFD2D81DE7270D007E089D /* MyFooPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CFD2D71DE7270D007E089D /* MyFooPostCell.swift */; };
 		21EA0E3E1B9AB51F00ED2DE7 /* test-logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E3D1B9AB51F00ED2DE7 /* test-logo.jpeg */; };
 		21EA0E421B9B1C3C00ED2DE7 /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EA0E411B9B1C3C00ED2DE7 /* HomeNavigationController.swift */; };
 		21EA0E441B9B35A400ED2DE7 /* shibafoo-logo1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E431B9B35A400ED2DE7 /* shibafoo-logo1.pdf */; };
@@ -80,11 +80,11 @@
 		217D60DC1B95E61500577081 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		217D60DE1B95E63E00577081 /* ReplyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplyViewController.swift; sourceTree = "<group>"; };
 		217D60E01B95E68200577081 /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
-		217D60E21B95EC1800577081 /* LovedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LovedViewController.swift; sourceTree = "<group>"; };
-		217D60E41B95EC9200577081 /* MyPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPostViewController.swift; sourceTree = "<group>"; };
 		2181DD161B9BF25C00383A7A /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		21CFD2D01DE71C3C007E089D /* LoveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoveViewController.swift; sourceTree = "<group>"; };
 		21CFD2D21DE71D0D007E089D /* LovePostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LovePostCell.swift; sourceTree = "<group>"; };
+		21CFD2D51DE726E4007E089D /* MyFooViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFooViewController.swift; sourceTree = "<group>"; };
+		21CFD2D71DE7270D007E089D /* MyFooPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFooPostCell.swift; sourceTree = "<group>"; };
 		21EA0E3D1B9AB51F00ED2DE7 /* test-logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "test-logo.jpeg"; sourceTree = "<group>"; };
 		21EA0E411B9B1C3C00ED2DE7 /* HomeNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
 		21EA0E431B9B35A400ED2DE7 /* shibafoo-logo1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "shibafoo-logo1.pdf"; sourceTree = "<group>"; };
@@ -163,10 +163,9 @@
 				21EA0E661B9BDE6F00ED2DE7 /* images */,
 				21EA0E651B9BDE0800ED2DE7 /* ReplyView */,
 				21CFD2CF1DE7199C007E089D /* LoveView */,
+				21CFD2D41DE726BB007E089D /* MyFooView */,
 				2171D5CD1A35EB260030CFA4 /* AppDelegate.swift */,
 				2171D5D11A35EB260030CFA4 /* Main.storyboard */,
-				217D60E41B95EC9200577081 /* MyPostViewController.swift */,
-				217D60E21B95EC1800577081 /* LovedViewController.swift */,
 				217D60DA1B8FE70C00577081 /* LoginViewController.swift */,
 				21EA0E411B9B1C3C00ED2DE7 /* HomeNavigationController.swift */,
 				217D60E01B95E68200577081 /* MainTabViewController.swift */,
@@ -212,6 +211,15 @@
 				21CFD2D21DE71D0D007E089D /* LovePostCell.swift */,
 			);
 			name = LoveView;
+			sourceTree = "<group>";
+		};
+		21CFD2D41DE726BB007E089D /* MyFooView */ = {
+			isa = PBXGroup;
+			children = (
+				21CFD2D51DE726E4007E089D /* MyFooViewController.swift */,
+				21CFD2D71DE7270D007E089D /* MyFooPostCell.swift */,
+			);
+			name = MyFooView;
 			sourceTree = "<group>";
 		};
 		21EA0E651B9BDE0800ED2DE7 /* ReplyView */ = {
@@ -463,12 +471,12 @@
 			files = (
 				21EA0E421B9B1C3C00ED2DE7 /* HomeNavigationController.swift in Sources */,
 				21EA0E601B9BC57500ED2DE7 /* ParsedReplyPostCell.swift in Sources */,
-				217D60E51B95EC9200577081 /* MyPostViewController.swift in Sources */,
 				2181DD171B9BF25C00383A7A /* PostViewController.swift in Sources */,
+				21CFD2D81DE7270D007E089D /* MyFooPostCell.swift in Sources */,
 				217D60E11B95E68200577081 /* MainTabViewController.swift in Sources */,
 				21EA0E5E1B9BC53A00ED2DE7 /* ParsedReplyPost.swift in Sources */,
 				212263A61DD837F800215800 /* EndpointConst.swift in Sources */,
-				217D60E31B95EC1800577081 /* LovedViewController.swift in Sources */,
+				21CFD2D61DE726E4007E089D /* MyFooViewController.swift in Sources */,
 				217D60DB1B8FE70C00577081 /* LoginViewController.swift in Sources */,
 				21CFD2D31DE71D0D007E089D /* LovePostCell.swift in Sources */,
 				212112861B974476009C93C5 /* ParsedPostCell.swift in Sources */,
