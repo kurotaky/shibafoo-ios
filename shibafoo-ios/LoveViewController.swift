@@ -159,14 +159,16 @@ class LoveViewController: UITableViewController {
             }
         }
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let button: UIButton = sender as! UIButton
+        let view = button.superview
+        let cell = view?.superview as! LovePostCell
+        let indexPath = self.tableView.indexPath(for: cell)
+        let parsedPost = self.parsedPosts[(indexPath?.row)!]
+        if segue.identifier == "postView" {
+            let postViewController: PostViewController = segue.destination as! PostViewController
+            postViewController.parsedPost = parsedPost
+        }
+    }
 }

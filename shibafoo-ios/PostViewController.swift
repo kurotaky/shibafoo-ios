@@ -12,6 +12,7 @@ import SwiftyJSON
 
 class PostViewController: UIViewController {
     var parsedPost: ParsedPost? = nil
+    var parsedReplyPost: ParsedReplyPost? = nil
 
     @IBOutlet weak var postTextField: UITextView!
 
@@ -24,6 +25,9 @@ class PostViewController: UIViewController {
         var params = ["content": content!, "email": email!, "token": token!] as [String: Any]
         if self.parsedPost != nil {
             params["post_id"] = self.parsedPost?.id
+        }
+        if self.parsedReplyPost != nil {
+            params["post_id"] = self.parsedReplyPost?.id
         }
         Alamofire.request(postUrl, method: .post, parameters: params)
             .responseJSON { response in
@@ -39,6 +43,9 @@ class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if self.parsedPost != nil {
+            let fooButton = self.view.viewWithTag(1) as? UIButton
+            fooButton?.setTitle("ReFoo!", for: UIControlState.normal)
+        } else if self.parsedReplyPost != nil {
             let fooButton = self.view.viewWithTag(1) as? UIButton
             fooButton?.setTitle("ReFoo!", for: UIControlState.normal)
         }

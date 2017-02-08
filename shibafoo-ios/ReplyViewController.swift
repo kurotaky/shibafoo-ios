@@ -161,15 +161,16 @@ class ReplyViewController: UITableViewController {
         }
     }
 
-    
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let button: UIButton = sender as! UIButton
+        let view = button.superview
+        let cell = view?.superview as! ParsedReplyPostCell
+        let indexPath = self.tableView.indexPath(for: cell)
+        let parsedReplyPost = self.parsedReplyPosts[(indexPath?.row)!]
+        if segue.identifier == "postView" {
+            let postViewController: PostViewController = segue.destination as! PostViewController
+            postViewController.parsedReplyPost = parsedReplyPost
+        }
     }
-    */
-
 }
