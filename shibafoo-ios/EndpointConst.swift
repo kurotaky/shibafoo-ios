@@ -11,7 +11,8 @@ import Foundation
 class EndpointConst : NSObject {
     /* shibafoo API URLs */
     #if DEBUG
-    let URL = "http://localhost:3000/"
+    // let URL = "http://localhost:3000/"
+    let URL = "https://shibafoo-shibafoo.sqale.jp/"
     #elseif STAGING
     let URL = "http://shibafoo-staging-shibafoo.sqale.jp/"
     #else

@@ -24,6 +24,7 @@
 		21CFD2D31DE71D0D007E089D /* LovePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CFD2D21DE71D0D007E089D /* LovePostCell.swift */; };
 		21CFD2D61DE726E4007E089D /* MyFooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CFD2D51DE726E4007E089D /* MyFooViewController.swift */; };
 		21CFD2D81DE7270D007E089D /* MyFooPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CFD2D71DE7270D007E089D /* MyFooPostCell.swift */; };
+		21CFD2DA1DE734EA007E089D /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CFD2D91DE734EA007E089D /* SettingTableViewController.swift */; };
 		21EA0E3E1B9AB51F00ED2DE7 /* test-logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E3D1B9AB51F00ED2DE7 /* test-logo.jpeg */; };
 		21EA0E421B9B1C3C00ED2DE7 /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EA0E411B9B1C3C00ED2DE7 /* HomeNavigationController.swift */; };
 		21EA0E441B9B35A400ED2DE7 /* shibafoo-logo1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E431B9B35A400ED2DE7 /* shibafoo-logo1.pdf */; };
@@ -85,6 +86,7 @@
 		21CFD2D21DE71D0D007E089D /* LovePostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LovePostCell.swift; sourceTree = "<group>"; };
 		21CFD2D51DE726E4007E089D /* MyFooViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFooViewController.swift; sourceTree = "<group>"; };
 		21CFD2D71DE7270D007E089D /* MyFooPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFooPostCell.swift; sourceTree = "<group>"; };
+		21CFD2D91DE734EA007E089D /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		21EA0E3D1B9AB51F00ED2DE7 /* test-logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "test-logo.jpeg"; sourceTree = "<group>"; };
 		21EA0E411B9B1C3C00ED2DE7 /* HomeNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
 		21EA0E431B9B35A400ED2DE7 /* shibafoo-logo1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "shibafoo-logo1.pdf"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				21EA0E411B9B1C3C00ED2DE7 /* HomeNavigationController.swift */,
 				217D60E01B95E68200577081 /* MainTabViewController.swift */,
 				2181DD161B9BF25C00383A7A /* PostViewController.swift */,
+				21CFD2D91DE734EA007E089D /* SettingTableViewController.swift */,
 				2171D5D41A35EB260030CFA4 /* Images.xcassets */,
 				2171D5E11A35EB260030CFA4 /* Supporting Files */,
 				2171D5D61A35EB260030CFA4 /* LaunchScreen.xib */,
@@ -338,7 +341,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "mo-fu";
 				TargetAttributes = {
 					2171D5C71A35EB260030CFA4 = {
@@ -482,6 +485,7 @@
 				212112861B974476009C93C5 /* ParsedPostCell.swift in Sources */,
 				212112841B973BCD009C93C5 /* ParsedPost.swift in Sources */,
 				2171D5CE1A35EB260030CFA4 /* AppDelegate.swift in Sources */,
+				21CFD2DA1DE734EA007E089D /* SettingTableViewController.swift in Sources */,
 				217D60DD1B95E61500577081 /* HomeViewController.swift in Sources */,
 				217D60DF1B95E63E00577081 /* ReplyViewController.swift in Sources */,
 				21CFD2D11DE71C3C007E089D /* LoveViewController.swift in Sources */,
