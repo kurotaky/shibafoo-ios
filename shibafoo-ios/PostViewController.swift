@@ -11,6 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class PostViewController: UIViewController {
+    var parsedPost: ParsedPost? = nil
 
     @IBOutlet weak var postTextField: UITextView!
 
@@ -20,7 +21,10 @@ class PostViewController: UIViewController {
         let userDefault = UserDefaults.standard
         let token = userDefault.object(forKey: "authentication_token") as? String
         let email = userDefault.object(forKey: "email") as? String
-        let params = ["content": content!, "email": email!, "token": token!]
+        var params = ["content": content!, "email": email!, "token": token!] as [String: Any]
+        if self.parsedPost != nil {
+            params["post_id"] = self.parsedPost?.id
+        }
         Alamofire.request(postUrl, method: .post, parameters: params)
             .responseJSON { response in
                 if (response.response?.statusCode == 200) {
@@ -34,8 +38,10 @@ class PostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if self.parsedPost != nil {
+            let fooButton = self.view.viewWithTag(1) as? UIButton
+            fooButton?.setTitle("ReFoo!", for: UIControlState.normal)
+        }
     }
 
     override func didReceiveMemoryWarning() {

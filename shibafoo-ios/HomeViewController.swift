@@ -84,32 +84,33 @@ class HomeViewController: UITableViewController {
         if let token = userDefault.object(forKey: "authentication_token") as? String {
             if let email = userDefault.object(forKey: "email") as? String {
                 let parameters: Parameters = ["email": email, "token": token]
-                Alamofire.request(EndpointConst().URL + "api/posts/friend", parameters: parameters).responseJSON { response in
-                    self.parsedPosts.removeAll(keepingCapacity: true)
-                    if let posts = response.result.value {
-                        for post in posts as! [AnyObject] {
-                            let parsedPost = ParsedPost()
-                            parsedPost.content = post["content"] as? String
-                            let inputDateFormatter = DateFormatter()
-                            inputDateFormatter.locale = Locale(identifier: "ja")
-                            inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-                            let date: Date? = inputDateFormatter.date(from: (post["created_at"] as? String)!)
-                            let outputDateFormatter = DateFormatter()
-                            outputDateFormatter.dateFormat = "yyy/MM/dd HH:mm"
-                            parsedPost.createdAt = outputDateFormatter.string(from: date!)
-                            if let avatarUrl = post["avatar_url"] as? String {
-                                parsedPost.avatarURL = URL(string: avatarUrl)
+                Alamofire.request(EndpointConst().URL + "api/posts/friend", parameters: parameters)
+                    .responseJSON { response in
+                        self.parsedPosts.removeAll(keepingCapacity: true)
+                        if let posts = response.result.value {
+                            for post in posts as! [AnyObject] {
+                                let parsedPost = ParsedPost()
+                                parsedPost.content = post["content"] as? String
+                                let inputDateFormatter = DateFormatter()
+                                inputDateFormatter.locale = Locale(identifier: "ja")
+                                inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+                                let date: Date? = inputDateFormatter.date(from: (post["created_at"] as? String)!)
+                                let outputDateFormatter = DateFormatter()
+                                outputDateFormatter.dateFormat = "yyy/MM/dd HH:mm"
+                                parsedPost.createdAt = outputDateFormatter.string(from: date!)
+                                if let avatarUrl = post["avatar_url"] as? String {
+                                    parsedPost.avatarURL = URL(string: avatarUrl)
+                                }
+                                parsedPost.nickname = post["nickname"] as? String
+                                parsedPost.title = post["title"] as? String
+                                parsedPost.lovesCount = post["loves_count"] as? Int
+                                parsedPost.isLoved = post["is_loved"] as? String
+                                parsedPost.id = post["id"] as? Int
+                                self.parsedPosts.append(parsedPost)
                             }
-                            parsedPost.nickname = post["nickname"] as? String
-                            parsedPost.title = post["title"] as? String
-                            parsedPost.lovesCount = post["loves_count"] as? Int
-                            parsedPost.isLoved = post["is_loved"] as? String
-                            parsedPost.id = post["id"] as? Int
-                            self.parsedPosts.append(parsedPost)
+                            DispatchQueue.main.async(execute: { ()-> Void in self.tableView.reloadData() })
                         }
-                        DispatchQueue.main.async(execute: { ()-> Void in self.tableView.reloadData() })
                     }
-                }
             } else {
                 // tokenがない場合はログイン画面を表示
                 let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "LoginNavigationController") as? UINavigationController
@@ -162,13 +163,16 @@ class HomeViewController: UITableViewController {
         }
     }
     
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let button: UIButton = sender as! UIButton
+        let view = button.superview
+        let cell = view?.superview as! ParsedPostCell
+        let indexPath = self.tableView.indexPath(for: cell)
+        let parsedPost = self.parsedPosts[(indexPath?.row)!]
+        if segue.identifier == "postView" {
+            let postViewController: PostViewController = segue.destination as! PostViewController
+            postViewController.parsedPost = parsedPost
+        }
     }
-    */
 }

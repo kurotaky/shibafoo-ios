@@ -9,10 +9,13 @@
 import UIKit
 import Alamofire
 
-class MainTabViewController: UITabBarController {
+class MainTabViewController: UITabBarController, UITabBarControllerDelegate {
     
+    @IBOutlet weak var logSegmentedControl: UISegmentedControl!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.delegate = self
     }
     
     fileprivate var isAuthenticated = false
@@ -46,6 +49,14 @@ class MainTabViewController: UITabBarController {
                     let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "LoginNavigationController") as? UINavigationController
                     self.navigationController?.present(navigationController!, animated: true, completion: nil)
                 }
+        }
+    }
+
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if self.selectedIndex != 0 {
+            self.logSegmentedControl.isHidden = true
+        } else {
+            self.logSegmentedControl.isHidden = false
         }
     }
 
