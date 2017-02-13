@@ -22,6 +22,7 @@ class ReplyViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.tableFooterView = UIView() // フッターの線を消す
         self.navigationItem.title = "みんなのログ"
         reloadPosts()
         let refresher = UIRefreshControl()

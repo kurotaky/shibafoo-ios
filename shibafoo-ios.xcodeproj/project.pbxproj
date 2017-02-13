@@ -32,8 +32,6 @@
 		21EA0E4A1B9B7BB800ED2DE7 /* timeline_icon_refoo.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E471B9B7BB800ED2DE7 /* timeline_icon_refoo.png */; };
 		21EA0E4B1B9B7BB800ED2DE7 /* timeline_icon_love_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E481B9B7BB800ED2DE7 /* timeline_icon_love_on.png */; };
 		21EA0E4C1B9B7BB800ED2DE7 /* timeline_icon_love_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E491B9B7BB800ED2DE7 /* timeline_icon_love_off.png */; };
-		21EA0E551B9BC12700ED2DE7 /* footer_icon_home_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E4D1B9BC12700ED2DE7 /* footer_icon_home_off.png */; };
-		21EA0E561B9BC12700ED2DE7 /* footer_icon_home_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E4E1B9BC12700ED2DE7 /* footer_icon_home_on.png */; };
 		21EA0E571B9BC12700ED2DE7 /* footer_icon_love_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E4F1B9BC12700ED2DE7 /* footer_icon_love_off.png */; };
 		21EA0E581B9BC12700ED2DE7 /* footer_icon_love_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E501B9BC12700ED2DE7 /* footer_icon_love_on.png */; };
 		21EA0E591B9BC12700ED2DE7 /* footer_icon_mylog_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 21EA0E511B9BC12700ED2DE7 /* footer_icon_mylog_off.png */; };
@@ -94,8 +92,6 @@
 		21EA0E471B9B7BB800ED2DE7 /* timeline_icon_refoo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeline_icon_refoo.png; sourceTree = "<group>"; };
 		21EA0E481B9B7BB800ED2DE7 /* timeline_icon_love_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeline_icon_love_on.png; sourceTree = "<group>"; };
 		21EA0E491B9B7BB800ED2DE7 /* timeline_icon_love_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeline_icon_love_off.png; sourceTree = "<group>"; };
-		21EA0E4D1B9BC12700ED2DE7 /* footer_icon_home_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footer_icon_home_off.png; sourceTree = "<group>"; };
-		21EA0E4E1B9BC12700ED2DE7 /* footer_icon_home_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footer_icon_home_on.png; sourceTree = "<group>"; };
 		21EA0E4F1B9BC12700ED2DE7 /* footer_icon_love_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footer_icon_love_off.png; sourceTree = "<group>"; };
 		21EA0E501B9BC12700ED2DE7 /* footer_icon_love_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footer_icon_love_on.png; sourceTree = "<group>"; };
 		21EA0E511B9BC12700ED2DE7 /* footer_icon_mylog_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footer_icon_mylog_off.png; sourceTree = "<group>"; };
@@ -252,8 +248,6 @@
 				21F741941DE03CAB00A71F13 /* timeline_icon_love_on-small.png */,
 				21EA0E491B9B7BB800ED2DE7 /* timeline_icon_love_off.png */,
 				21F741881DDC922500A71F13 /* timeline_icon_love_off-small.png */,
-				21EA0E4D1B9BC12700ED2DE7 /* footer_icon_home_off.png */,
-				21EA0E4E1B9BC12700ED2DE7 /* footer_icon_home_on.png */,
 				21EA0E4F1B9BC12700ED2DE7 /* footer_icon_love_off.png */,
 				21EA0E501B9BC12700ED2DE7 /* footer_icon_love_on.png */,
 				21EA0E511B9BC12700ED2DE7 /* footer_icon_mylog_off.png */,
@@ -396,8 +390,6 @@
 				21EA0E5C1B9BC12700ED2DE7 /* footer_icon_refoo_on.png in Resources */,
 				21EA0E621B9BCED300ED2DE7 /* header_icon_menu.png in Resources */,
 				21EA0E4B1B9B7BB800ED2DE7 /* timeline_icon_love_on.png in Resources */,
-				21EA0E561B9BC12700ED2DE7 /* footer_icon_home_on.png in Resources */,
-				21EA0E551B9BC12700ED2DE7 /* footer_icon_home_off.png in Resources */,
 				21EA0E4C1B9B7BB800ED2DE7 /* timeline_icon_love_off.png in Resources */,
 				21F741901DDC959F00A71F13 /* footer_icon_home_on-small.png in Resources */,
 				21EA0E641B9BCF1700ED2DE7 /* header_icon_foo.png in Resources */,
@@ -637,7 +629,7 @@
 				PRODUCT_NAME = "shibafoo-ios";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -657,7 +649,7 @@
 				PRODUCT_NAME = "shibafoo-ios";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

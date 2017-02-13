@@ -215,7 +215,7 @@
             <objects>
                 <navigationController id="bMm-5f-ge3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="more" id="8Lv-96-5CO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cqt-jq-XGV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cqt-jq-XGV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -560,7 +560,7 @@
             <objects>
                 <navigationController id="X5M-fA-zIg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Loveしたログ" image="footer_icon_love_off.png" selectedImage="footer_icon_love_on.png" id="hXi-6T-E2b"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ONq-g1-5qQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ONq-g1-5qQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -735,7 +735,7 @@
             <objects>
                 <navigationController id="Y7C-Sf-jra" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="自分のログ" image="footer_icon_mylog_off.png" selectedImage="footer_icon_mylog_on.png" id="Xvc-V7-coF"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="DXJ-IB-ybj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DXJ-IB-ybj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -818,8 +818,8 @@
         <scene sceneID="1AQ-km-L4O">
             <objects>
                 <navigationController id="JUe-mx-8z2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ホーム" image="footer_icon_home_on-small.png" id="n3c-8E-U9g"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9b8-pS-Mpk">
+                    <tabBarItem key="tabBarItem" title="ホーム" image="footer_icon_home_on" selectedImage="footer_icon_home_off" id="n3c-8E-U9g"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9b8-pS-Mpk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -839,7 +839,7 @@
             <objects>
                 <navigationController id="RQH-EG-dqM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="ReFoo!" image="footer_icon_refoo_off-small.png" id="M57-Es-7Xz"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EbU-k5-Yo6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EbU-k5-Yo6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -855,7 +855,7 @@
         <scene sceneID="X0r-U2-vQu">
             <objects>
                 <navigationController storyboardIdentifier="MainTabNavigationController" id="qos-LR-jvS" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8S5-oS-uLe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8S5-oS-uLe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.4549019608" green="0.73725490199999999" blue="0.043137254899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -913,7 +913,7 @@
         <scene sceneID="S2d-6t-Gkb">
             <objects>
                 <navigationController storyboardIdentifier="LoginNavigationController" id="SOz-4j-UUg" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="SFe-0n-YB0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SFe-0n-YB0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -937,18 +937,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1nT-B8-pRz">
-                                <rect key="frame" x="16" y="260" width="568" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1nT-B8-pRz">
+                                <rect key="frame" x="16" y="260" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yZ9-vQ-GtE">
-                                <rect key="frame" x="16" y="298" width="568" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yZ9-vQ-GtE">
+                                <rect key="frame" x="16" y="298" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDt-v9-j3g">
-                                <rect key="frame" x="16" y="336" width="568" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDt-v9-j3g">
+                                <rect key="frame" x="16" y="336" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.4549019608" green="0.73725490199999999" blue="0.043137254899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="ログイン">
@@ -959,8 +959,8 @@
                                     <action selector="loginButtonDidPush:" destination="K0F-rb-kmq" eventType="touchUpInside" id="MG6-An-2cC"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="login_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="uQo-JH-mHL">
-                                <rect key="frame" x="225" y="94" width="150" height="150"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="uQo-JH-mHL">
+                                <rect key="frame" x="112" y="94" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="Ngr-Qd-HJK"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="a85-Jb-ZOQ"/>
@@ -994,11 +994,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1qX-WG-OIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-689" y="-306"/>
+            <point key="canvasLocation" x="-689.5" y="-306.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="footer_icon_home_on-small.png" width="28" height="26"/>
+        <image name="footer_icon_home_off" width="30" height="30"/>
+        <image name="footer_icon_home_on" width="30" height="30"/>
         <image name="footer_icon_love_off.png" width="28" height="25"/>
         <image name="footer_icon_love_on.png" width="28" height="25"/>
         <image name="footer_icon_mylog_off.png" width="28" height="25"/>
