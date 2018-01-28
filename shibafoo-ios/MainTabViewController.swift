@@ -15,6 +15,7 @@ class MainTabViewController: UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBar.items?[0].image = UIImage(named: "footer_icon_home_off")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         self.delegate = self
     }
     
@@ -60,11 +61,6 @@ class MainTabViewController: UITabBarController, UITabBarControllerDelegate {
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     @IBAction func unwindToMainTabViewController(_ segue: UIStoryboardSegue) {
     }
 

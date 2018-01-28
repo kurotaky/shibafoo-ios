@@ -21,12 +21,14 @@ class HomeViewController: UITableViewController {
         self.parsedPosts.append(ParsedPost(id: 1, content: "New row", createdAt: Date().description, avatarURL: defaultAvatarURL, nickname: "new", title: "title", lovesCount: 0, isLoved: "false"))
         reloadPosts()
         refreshControl!.endRefreshing()
+        print("aaaa-------")
+        let vc = self.navigationController?.parent
+        //print(vc!.segmentedControl)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView() // フッターの線を消す
-        self.navigationItem.title = "みんなのログ"
         reloadPosts()
         let refresher = UIRefreshControl()
         refresher.addTarget(self, action: #selector(HomeViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)

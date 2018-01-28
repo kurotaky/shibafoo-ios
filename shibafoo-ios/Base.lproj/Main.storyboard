@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qos-LR-jvS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G19009" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qos-LR-jvS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="22" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d9w-Nz-n20" id="Y3R-k3-fIV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015.09.01 18:00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwW-Ma-kG8">
@@ -71,11 +71,11 @@
                                                 <constraint firstAttribute="width" constant="100" id="uMT-aT-64Q"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title="0 Love" image="timeline_icon_love_off-small.png">
+                                            <state key="normal" title="0 Love" image="timeline_icon_love_off">
                                                 <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
-                                            <state key="selected" title="0 Love" image="timeline_icon_love_on-small.png">
+                                            <state key="selected" title="0 Love" image="timeline_icon_love_on">
                                                 <color key="titleColor" red="1" green="0.0" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
@@ -97,7 +97,7 @@
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="daN-5S-JVT"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title=" ReFoo! 0 件" image="timeline_icon_refoo-small.png">
+                                            <state key="normal" title=" ReFoo! 0 件" image="timeline_icon_refoo">
                                                 <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
@@ -182,7 +182,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VK3-dI-gxV" id="0vi-qv-CoB">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ログアウト" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csy-6c-4Ad">
@@ -240,7 +240,7 @@
                                 <rect key="frame" x="0.0" y="22" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UvC-lU-Zoh" id="eFn-rU-1LB">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015.09.01 18:00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ge-Ae-Bg6">
@@ -288,11 +288,11 @@
                                                 <constraint firstAttribute="height" constant="22" id="jCK-c8-50G"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title="0 Love" image="timeline_icon_love_off-small.png">
+                                            <state key="normal" title="0 Love" image="timeline_icon_love_off">
                                                 <color key="titleColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
-                                            <state key="selected" title="0 Love" image="timeline_icon_love_on-small.png">
+                                            <state key="selected" title="0 Love" image="timeline_icon_love_on">
                                                 <color key="titleColor" red="1" green="0.0" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
@@ -314,7 +314,7 @@
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="iux-hd-6po"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title=" ReFoo! 0 件" image="timeline_icon_refoo-small.png">
+                                            <state key="normal" title=" ReFoo! 0 件" image="timeline_icon_refoo">
                                                 <color key="titleColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
@@ -341,11 +341,11 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeline_icon_refoo.png" translatesAutoresizingMaskIntoConstraints="NO" id="5mH-ps-C3p">
-                                            <rect key="frame" x="66" y="51" width="26" height="22"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeline_icon_refoo" translatesAutoresizingMaskIntoConstraints="NO" id="5mH-ps-C3p">
+                                            <rect key="frame" x="66" y="51" width="25" height="25"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nickname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijh-8i-QAc">
-                                            <rect key="frame" x="96" y="51" width="59" height="16"/>
+                                            <rect key="frame" x="95" y="51" width="59" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="1" green="0.0" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -411,7 +411,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XTJ-O5-Dam" id="BX8-CM-CgB">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015.09.01 18:00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfm-ud-wjJ">
@@ -459,11 +459,11 @@
                                                 <constraint firstAttribute="height" constant="22" id="jV0-CW-dGY"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title="0 Love" image="timeline_icon_love_off-small.png">
+                                            <state key="normal" title="0 Love" image="timeline_icon_love_off">
                                                 <color key="titleColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
-                                            <state key="selected" title="0 Love" image="timeline_icon_love_on-small.png">
+                                            <state key="selected" title="0 Love" image="timeline_icon_love_on">
                                                 <color key="titleColor" red="1" green="0.0" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
@@ -485,7 +485,7 @@
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Th9-kU-tmV"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title=" ReFoo! 0 件" image="timeline_icon_refoo-small.png">
+                                            <state key="normal" title=" ReFoo! 0 件" image="timeline_icon_refoo">
                                                 <color key="titleColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
@@ -559,7 +559,7 @@
         <scene sceneID="77o-GE-caI">
             <objects>
                 <navigationController id="X5M-fA-zIg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Loveしたログ" image="footer_icon_love_off.png" selectedImage="footer_icon_love_on.png" id="hXi-6T-E2b"/>
+                    <tabBarItem key="tabBarItem" title="Loveしたログ" image="footer_icon_love_off" selectedImage="footer_icon_love_off" id="hXi-6T-E2b"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ONq-g1-5qQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -585,7 +585,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Z0-cu-2BK" id="MB6-8S-g5E">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015.09.01 18:00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmx-4S-zdV">
@@ -633,11 +633,11 @@
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="uMe-F0-QKY"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title="0 Love" image="timeline_icon_love_off-small.png">
+                                            <state key="normal" title="0 Love" image="timeline_icon_love_off">
                                                 <color key="titleColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
-                                            <state key="selected" title="0 Love" image="timeline_icon_love_on-small.png">
+                                            <state key="selected" title="0 Love" image="timeline_icon_love_on">
                                                 <color key="titleColor" red="1" green="0.0" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
@@ -660,7 +660,7 @@
                                                 <constraint firstAttribute="height" constant="22" id="sdb-xd-4e2"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title=" ReFoo! 0 件" image="timeline_icon_refoo-small.png">
+                                            <state key="normal" title=" ReFoo! 0 件" image="timeline_icon_refoo">
                                                 <color key="titleColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
@@ -734,7 +734,7 @@
         <scene sceneID="AG0-AT-tlN">
             <objects>
                 <navigationController id="Y7C-Sf-jra" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="自分のログ" image="footer_icon_mylog_off.png" selectedImage="footer_icon_mylog_on.png" id="Xvc-V7-coF"/>
+                    <tabBarItem key="tabBarItem" title="自分のログ" image="footer_icon_mylog_off.png" selectedImage="footer_icon_mylog_off" id="Xvc-V7-coF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DXJ-IB-ybj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -818,10 +818,17 @@
         <scene sceneID="1AQ-km-L4O">
             <objects>
                 <navigationController id="JUe-mx-8z2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ホーム" image="footer_icon_home_on" selectedImage="footer_icon_home_off" id="n3c-8E-U9g"/>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="footer_icon_home_off" selectedImage="footer_icon_home_on" id="n3c-8E-U9g">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.4549019608" green="0.73725490199999999" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9b8-pS-Mpk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.4549019608" green="0.73725490199999999" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="0.0"/>
                         </textAttributes>
@@ -838,7 +845,7 @@
         <scene sceneID="vBE-Te-LWd">
             <objects>
                 <navigationController id="RQH-EG-dqM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ReFoo!" image="footer_icon_refoo_off-small.png" id="M57-Es-7Xz"/>
+                    <tabBarItem key="tabBarItem" title="ReFoo!" image="footer_icon_refoo_off" id="M57-Es-7Xz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EbU-k5-Yo6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -875,7 +882,7 @@
                     <navigationItem key="navigationItem" id="h34-EJ-CZ9">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Biz-g7-oDF">
-                            <rect key="frame" x="68" y="7" width="240" height="30"/>
+                            <rect key="frame" x="67.5" y="7" width="240" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="みんなのログ"/>
@@ -883,7 +890,7 @@
                             </segments>
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </segmentedControl>
-                        <barButtonItem key="rightBarButtonItem" image="header_icon_foo-small.png" id="iWt-on-4y5">
+                        <barButtonItem key="rightBarButtonItem" image="header_icon_foo" id="iWt-on-4y5">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="Kix-Hn-Ac9" kind="presentation" id="7Xs-zh-XqB"/>
@@ -895,6 +902,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.4549019608" green="0.73725490199999999" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <outlet property="logSegmentedControl" destination="Biz-g7-oDF" id="soA-YQ-6KE"/>
@@ -959,7 +967,7 @@
                                     <action selector="loginButtonDidPush:" destination="K0F-rb-kmq" eventType="touchUpInside" id="MG6-An-2cC"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="uQo-JH-mHL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_logo" translatesAutoresizingMaskIntoConstraints="NO" id="uQo-JH-mHL">
                                 <rect key="frame" x="112" y="94" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="Ngr-Qd-HJK"/>
@@ -1000,19 +1008,18 @@
     <resources>
         <image name="footer_icon_home_off" width="30" height="30"/>
         <image name="footer_icon_home_on" width="30" height="30"/>
-        <image name="footer_icon_love_off.png" width="28" height="25"/>
-        <image name="footer_icon_love_on.png" width="28" height="25"/>
+        <image name="footer_icon_love_off" width="30" height="30"/>
+        <image name="footer_icon_mylog_off" width="30" height="30"/>
         <image name="footer_icon_mylog_off.png" width="28" height="25"/>
-        <image name="footer_icon_mylog_on.png" width="28" height="25"/>
-        <image name="footer_icon_refoo_off-small.png" width="28" height="25"/>
-        <image name="header_icon_foo-small.png" width="32" height="34"/>
-        <image name="login_logo.png" width="318" height="248"/>
-        <image name="timeline_icon_love_off-small.png" width="14" height="13"/>
-        <image name="timeline_icon_love_on-small.png" width="14" height="13"/>
-        <image name="timeline_icon_refoo-small.png" width="14" height="12"/>
-        <image name="timeline_icon_refoo.png" width="26" height="22"/>
+        <image name="footer_icon_refoo_off" width="30" height="30"/>
+        <image name="header_icon_foo" width="30" height="30"/>
+        <image name="login_logo" width="318" height="248"/>
+        <image name="timeline_icon_love_off" width="25" height="25"/>
+        <image name="timeline_icon_love_on" width="25" height="25"/>
+        <image name="timeline_icon_refoo" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="J60-il-l5d"/>
+        <segue reference="PRv-of-KBn"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.4549019608" green="0.73725490199999999" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
 </document>
